@@ -44,16 +44,17 @@ class Aktualitates extends Component{
         {
             return(
             <div>
-                <h1>Jaunākais studentu dzīvē!</h1>
+                <h1 className="virsraksts">Jaunākais studentu dzīvē!</h1>
                 <ul>
                     {this.state.response.aktualitates.map(posts => 
-                    <div key={posts.id}>
+                    <div className="posts" key={posts.id}>
                         <span className="aktNosaukums">{posts.datat.nosaukums}</span><br/>
                         <span className ="aktApraksts">{posts.datat.apraksts}</span><br/>
                         <span className="aktAutors">{posts.datat.autors}</span><br/>
-                        <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span><br/>
-
+                        <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
                         <hr/>
+
+
                     </div>)}
                 </ul>
             </div>

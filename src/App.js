@@ -24,16 +24,16 @@ function App() {
 
         <Switch>
           <Route path="/studijas">
-            <h1 studijas/>
+            <h2 studijas/>
           </Route>
           <Route path="/aktualitates">
             <Aktualitates/>
           </Route>
           <Route path="/autostops">
-            <h1 autostops/>
+            <h2 autostops/>
           </Route>
           <Route path="/">
-            <h1>Ziņojumu dēlis!</h1>
+            <h2>Ziņojumu dēlis!</h2>
           </Route>
         </Switch>
       </div>

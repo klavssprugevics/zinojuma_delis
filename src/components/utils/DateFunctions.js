@@ -1,27 +1,36 @@
 import React from 'react';
 
 
-// Funkcij,kas pārveido timestamp par datumu
+// Funkcija, kas pārveido timestamp par datumu
 export const timestampToDate = (seconds) => 
 {
     // Pārveido timestamp par datumu
     const date = new Date(seconds * 1000);
-    const datums = date.toDateString();
 
+    // Iegūst datuma vērtības, pārveido, ja nepieciešams.
+    const gads = date.getFullYear();
+    const menesis =  oneDigitDateToTwoDigits(date.getMonth());
+    const diena =  oneDigitDateToTwoDigits(date.getDay());
 
-    // Izgūst vajadzīgās vērtības
-    var minutes = date.getMinutes();
-    var stundas = date.getHours();
-
-    stundas = oneDigitDateToTwoDigits(stundas);
-    minutes = oneDigitDateToTwoDigits(minutes);
-
+    //Pārveido laika vērtības, pārveido, ja nepieciešams.
+    const minutes = oneDigitDateToTwoDigits(date.getMinutes());
+    const stundas = oneDigitDateToTwoDigits(date.getHours());
+    
+    const datums = diena + "." + menesis + "." + gads;
     const laiks = stundas + ":" + minutes;
+
+
+    // Lai būtu pirmais vārds boldā
+    var divStyle =
+    {
+        fontWeight:'bold'
+    };
+
     return(
         <div>
+            <span style={divStyle}>Pievienots: </span>
             <span>{datums}</span>
-            <span>{laiks}</span>
-
+            <span> {laiks}</span>
         </div>
     )
 };

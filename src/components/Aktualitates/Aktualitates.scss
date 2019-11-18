@@ -1,0 +1,61 @@
+$light_blue: #99D3DF;
+$blue: #88BBD6;
+$gray: #CDCDCD;
+$light_gray : #E9E9E9; 
+
+
+.virsraksts
+{
+    margin-top: 30px;
+
+    font-style: italic;
+    font-size: 50px;
+    color: rgb(121, 114, 114);
+    text-align: center;
+
+}
+
+
+.posts
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .aktNosaukums
+    {
+        font-style: bold;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+    
+    .aktApraksts
+    {
+        margin: 20px;
+        font-size: 25px;
+        color: rgb(59, 54, 54);
+    }
+
+    .aktAutors
+    {
+        margin-left: 20px;
+        font-size: 23px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+
+    .aktDatums
+    {
+        margin: 20px;
+        font-size: 20px;
+    }
+}
+
+hr
+{
+    border: 0;
+    width: 100%;               
+    background-color:$blue;
+    height: 1px;
+}
