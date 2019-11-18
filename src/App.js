@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -7,6 +6,7 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+import Aktualitates from './components/Aktualitates/Aktualitates.js';
 
 
 
@@ -27,7 +27,7 @@ function App() {
             <h1 studijas/>
           </Route>
           <Route path="/aktualitates">
-            <h1 aktualitates/>
+            <Aktualitates/>
           </Route>
           <Route path="/autostops">
             <h1 autostops/>

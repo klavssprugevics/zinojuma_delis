@@ -16,7 +16,11 @@ class Aktualitates extends Component{
     render()
     {
         return(
-            <div></div>
+        <div>
+            <h1>Jaunākais studentu dzīvē!</h1>
+            
+            
+        </div>
         );
 
     }
