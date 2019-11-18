@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./Aktualitates.scss";
 import axios from 'axios';
-
+import {timestampToDate} from '.././utils/DateFunctions.js';
 
 class Aktualitates extends Component{
 
@@ -32,6 +32,7 @@ class Aktualitates extends Component{
         
     }
 
+
     render()
     {
         
@@ -50,6 +51,8 @@ class Aktualitates extends Component{
                         <span className="aktNosaukums">{posts.datat.nosaukums}</span><br/>
                         <span className ="aktApraksts">{posts.datat.apraksts}</span><br/>
                         <span className="aktAutors">{posts.datat.autors}</span><br/>
+                        <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span><br/>
+
                         <hr/>
                     </div>)}
                 </ul>
