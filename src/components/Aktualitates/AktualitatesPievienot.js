@@ -19,11 +19,22 @@ class AktualitatesPievienot extends Component{
 
     ParseInput()
     {
+        // Pārbaude -> nevar būt mazāk par 5 simboliem un saturēt tikai no simboliem.
+        
+
         console.log(this.state.nosaukums);
         console.log(this.state.apraksts);
         console.log(this.state.autors);
 
+        const data = {
+            "nosaukums": this.state.nosaukums,
+            "apraksts": this.state.apraksts,
+            "autors": this.state.autors
+        };
 
+        axios.post("http://localhost:5000/api/aktualitates", data)
+        .then(response => console.log(response))
+        .catch(error => console.log(error));
 
     }
 
