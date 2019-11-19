@@ -31,11 +31,15 @@ class AktualitatesPievienot extends Component{
         };
 
         axios.post("http://localhost:5000/api/aktualitates", data)
-        .then(response => console.log(response))
+        .then(response => 
+        {
+            console.log(response)
+            this.setState({submitPressed: true});
+        })
         .catch(error => console.log(error));
 
-        
-        this.setState({submitPressed: true});
+
+
 
     }
 
