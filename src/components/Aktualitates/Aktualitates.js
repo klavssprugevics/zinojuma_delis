@@ -6,7 +6,7 @@ import {
     NavLink
   } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css'; 
-
+import {Redirect} from 'react-router-dom';
 
 class Aktualitates extends Component{
 
@@ -16,7 +16,8 @@ class Aktualitates extends Component{
         this.state = 
         {
             isLoaded: false,
-            response: null
+            response: null,
+            delete: false,
         }
 
         this.DeletePost = this.DeletePost.bind(this);
@@ -33,7 +34,6 @@ class Aktualitates extends Component{
         axios.get("http://localhost:5000/api/aktualitates")
         .then(res =>
         {
-            // console.log(res.data);
             this.setState({response: res.data, isLoaded: true});
         });
         
@@ -42,7 +42,13 @@ class Aktualitates extends Component{
 
     DeletePost(aktID)
     {
-        console.log(aktID);
+        axios.delete('http://localhost:5000/api/aktualitates/' + aktID)
+        .then(res =>
+        {
+            this.setState({isLoaded:false});
+            this.componentDidMount();
+
+        });
     }
 
 
