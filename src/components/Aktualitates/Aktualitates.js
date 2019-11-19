@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import './Aktualitates.scss';
 import axios from 'axios';
 import {timestampToDate} from '.././utils/DateFunctions.js';
-import {
-    NavLink
-  } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css'; 
-import {Redirect} from 'react-router-dom';
+
 
 class Aktualitates extends Component{
 
@@ -16,19 +14,14 @@ class Aktualitates extends Component{
         //isLoaded - flag, lai ielādētu lapu tikai tad, kad saņemti dati
         //response - iegūtie dati
         //delete - vai nospiesta delete poga
-        //edit - vai nospiesta edit poga
-        //activeID - izvēlētā elementa ID
         this.state = 
         {
             isLoaded: false,
             response: null,
             delete: false,
-            edit: false,
-            activeID: null,
         }
 
         this.DeletePost = this.DeletePost.bind(this);
-        this.EditPost = this.EditPost.bind(this);
 
     }
 
@@ -60,12 +53,6 @@ class Aktualitates extends Component{
         });
     }
 
-    EditPost(aktID)
-    {
-        this.setState({edit: true,
-        activeID: aktID});
-    }
-
     render()
     {
         
@@ -77,11 +64,6 @@ class Aktualitates extends Component{
         }
         else
         {
-            if(this.state.edit)
-            {
-                return <Redirect to={`/aktualitates/labot/${this.state.activeID}`}/>
-
-            }  
             return(
             <div>
                 <div className="virsrakstsPievienot">
@@ -97,7 +79,7 @@ class Aktualitates extends Component{
                         <div className="aktFooter">
                             <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
                             <button className="footerPoga" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
-                            <button className="footerPoga" type="button" onClick={() => this.EditPost(posts.id)}><i className="fa fa-pencil fa-2x"></i></button>
+                            <NavLink className="editLink" to={`/aktualitates/labot/${posts.id}`}>Labot</NavLink>
                         </div>
                         <hr/>
                     </div>)}

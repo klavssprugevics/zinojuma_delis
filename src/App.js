@@ -27,16 +27,14 @@ function App() {
           <Route path="/studijas">
             <h2 studijas/>
           </Route>
-          <Route exact path="/aktualitates/pievienot"
-          render={() => <AktualitatesPievienot/>}>
 
-
-
+          
           <Route exact  path="/aktualitates/labot/:id" render={(props) => (
           <AktualitatesLabot key={props.match.params.id} {...props} />)
           } />
 
-
+          <Route exact path="/aktualitates/pievienot"
+          render={() => <AktualitatesPievienot/>}>
 
           </Route>
           <Route path="/aktualitates">

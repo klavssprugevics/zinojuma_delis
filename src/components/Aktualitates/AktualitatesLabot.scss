@@ -1,0 +1,85 @@
+$light_blue: #99D3DF;
+$blue: #88BBD6;
+$gray: #CDCDCD;
+$light_gray : #E9E9E9; 
+
+.editFields
+{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+
+    .editAktVirsraksts
+    {
+
+        margin-bottom: 40px;
+        font-style: italic;
+        font-size: 50px;
+        color: rgb(121, 114, 114);
+        text-align: center;
+    }
+
+    .label
+    {
+        font-weight: bold;
+        font-size: 25px;
+
+    }
+
+    .textInput
+    {
+        border: none;
+        width: 40%;
+        height: 40px;
+        font-size: 30px;
+        margin: 10px;
+        font-family: inherit;
+    }
+
+    .textareaInput
+    {
+        border: none;
+        width: 40%;
+        height: 400px;
+        font-size: 30px;
+        margin: 10px;
+        font-family: inherit;
+    }
+
+
+    .buttonLabot
+    {
+        background-color: $blue;
+        border: none;
+        color: white;
+        font-size: 20px;
+
+        padding: 16px 32px;
+        margin-bottom: 10px;
+        width: 40%;
+    }
+
+    .buttonLabot:hover{
+        background-color: $light_blue;
+    }
+
+    .buttonDzest
+    {
+        background-color: rgb(158, 17, 17);
+        border: none;
+        color: white;
+        font-size: 20px;
+
+        padding: 16px 32px;
+        width: 40%;
+    }
+
+    .buttonDzest:hover{
+        background-color: rgb(167, 57, 57);
+    }
+
+
+}
+
