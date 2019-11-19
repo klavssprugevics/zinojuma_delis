@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import './Aktualitates.scss';
 import axios from 'axios';
 import {timestampToDate} from '.././utils/DateFunctions.js';
-
+import {
+    NavLink
+  } from "react-router-dom";
 class Aktualitates extends Component{
 
     constructor()
@@ -46,7 +48,10 @@ class Aktualitates extends Component{
         {
             return(
             <div>
-                <h1 className="virsraksts">Jaunākais studentu dzīvē!</h1>
+                <div className="virsrakstsPievienot">
+                    <h1 className="virsraksts">Jaunākais studentu dzīvē!</h1>
+                    <NavLink className="pievienotLink" to="/aktualitates/pievienot">Pievienot aktualitāti!</NavLink>
+                </div>
                 <ul>
                     {this.state.response.aktualitates.map(posts => 
                     <div className="posts" key={posts.id}>
