@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './AktualitatesPievienot.scss';
 import axios from 'axios';
-import InputField from '.././utils/InputField.js';
 
 
 class AktualitatesPievienot extends Component{
@@ -11,30 +10,42 @@ class AktualitatesPievienot extends Component{
         super();
         this.state = 
         {
-            inputNosaukums: '',
-            inputApraksts: '',
-            inputAutors: ''
+            nosaukums: '',
+            apraksts: '',
+            autors: ''
         }
+        this.ParseInput = this.ParseInput.bind(this);
     }
 
     ParseInput()
     {
-        console.log();
+        console.log(this.state.nosaukums);
+        console.log(this.state.apraksts);
+        console.log(this.state.autors);
+
+
+
     }
 
-    UpdateInput()
+    updateInput(event)
     {
+        const target = event.target;
+        const name = target.name;
+
         this.setState({
-            
-        })
+            [name]: event.target.value
+          });
+
     }
+
     render()
     {
         return(
             <div>
-                <InputField name="Nosaukums" textArea="False"/>    
-                <textarea value={this.state.inputApraksts} rows = "3" cols = "80"/>
-                <input value={this.state.inputAutors} type="text" name="autors"/><br/>
+                <input name="nosaukums" type="text" value={this.state.nosaukums} onChange={evt => this.updateInput(evt)} />
+                <textarea name="apraksts" type="text" value={this.state.apraksts}  onChange={evt => this.updateInput(evt)} />
+                <input name="autors" type="text" value={this.state.autors} onChange={evt => this.updateInput(evt)} />
+
                 <button type="button" onClick={this.ParseInput}>Publicēt!</button> 
             </div>
         );
