@@ -74,6 +74,17 @@ $light_gray : #E9E9E9;
         margin: 20px;
         font-size: 20px;
     }
+
+    .aktFooter
+    {
+        display: flex;
+        
+        .deleteButton
+        {
+            background-color: $light_gray;
+            border: none;
+        }
+    }
 }
 
 hr

@@ -5,6 +5,9 @@ import {timestampToDate} from '.././utils/DateFunctions.js';
 import {
     NavLink
   } from "react-router-dom";
+import 'font-awesome/css/font-awesome.min.css'; 
+
+
 class Aktualitates extends Component{
 
     constructor()
@@ -15,6 +18,8 @@ class Aktualitates extends Component{
             isLoaded: false,
             response: null
         }
+
+        this.DeletePost = this.DeletePost.bind(this);
     }
 
     componentDidMount()
@@ -32,6 +37,12 @@ class Aktualitates extends Component{
             this.setState({response: res.data, isLoaded: true});
         });
         
+    }
+
+
+    DeletePost(aktID)
+    {
+        console.log(aktID);
     }
 
 
@@ -58,7 +69,10 @@ class Aktualitates extends Component{
                         <span className="aktNosaukums">{posts.datat.nosaukums}</span><br/>
                         <span className ="aktApraksts">{posts.datat.apraksts}</span><br/>
                         <span className="aktAutors">{posts.datat.autors}</span><br/>
-                        <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
+                        <div className="aktFooter">
+                            <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
+                            <button className="deleteButton" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
+                        </div>
                         <hr/>
                     </div>)}
                 </ul>
