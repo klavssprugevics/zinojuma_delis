@@ -79,10 +79,11 @@ $light_gray : #E9E9E9;
     {
         display: flex;
         
-        .deleteButton
+        .footerPoga
         {
             background-color: $light_gray;
             border: none;
+            margin-left: 10px;
         }
     }
 }

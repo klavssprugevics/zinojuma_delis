@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Aktualitates from './components/Aktualitates/Aktualitates.js';
 import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
-
+import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
 
 
 function App() {
@@ -29,6 +29,14 @@ function App() {
           </Route>
           <Route exact path="/aktualitates/pievienot"
           render={() => <AktualitatesPievienot/>}>
+
+
+
+          <Route exact  path="/aktualitates/labot/:id" render={(props) => (
+          <AktualitatesLabot key={props.match.params.id} {...props} />)
+          } />
+
+
 
           </Route>
           <Route path="/aktualitates">
