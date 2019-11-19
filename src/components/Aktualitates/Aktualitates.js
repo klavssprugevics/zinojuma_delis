@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./Aktualitates.scss";
+import './Aktualitates.scss';
 import axios from 'axios';
 import {timestampToDate} from '.././utils/DateFunctions.js';
 
@@ -38,7 +38,9 @@ class Aktualitates extends Component{
         
         if(!this.state.isLoaded)
         {
-            return(<h1>Loading...</h1>)
+            return(
+            <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
+            )
         }
         else
         {
@@ -53,8 +55,6 @@ class Aktualitates extends Component{
                         <span className="aktAutors">{posts.datat.autors}</span><br/>
                         <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
                         <hr/>
-
-
                     </div>)}
                 </ul>
             </div>

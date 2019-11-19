@@ -7,6 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 import Aktualitates from './components/Aktualitates/Aktualitates.js';
+import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
 
 
 
@@ -26,9 +27,14 @@ function App() {
           <Route path="/studijas">
             <h2 studijas/>
           </Route>
+          <Route exact path="/aktualitates/pievienot"
+          render={() => <AktualitatesPievienot/>}>
+
+          </Route>
           <Route path="/aktualitates">
             <Aktualitates/>
           </Route>
+
           <Route path="/autostops">
             <h2 autostops/>
           </Route>
