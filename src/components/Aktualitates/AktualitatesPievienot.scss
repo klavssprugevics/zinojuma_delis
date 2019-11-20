@@ -40,6 +40,17 @@ $light_gray : #E9E9E9;
         font-family: inherit;
     }
 
+    .textInput
+    {
+        border: none;
+        width: 40%;
+        height: 40px;
+        font-size: 30px;
+        margin: 10px;
+        font-family: inherit;
+    }
+
+
     .textareaInput
     {
         border: none;
@@ -59,6 +70,15 @@ $light_gray : #E9E9E9;
 
         padding: 16px 32px;
         width: 40%;
+    }
+
+    .errorMsg
+    {
+        margin: 5px;
+        font-size: 20px;
+        text-align: center;
+        color: red;
+
     }
 
     .buttonPievienot:hover{
