@@ -6,9 +6,13 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+
 import Aktualitates from './components/Aktualitates/Aktualitates.js';
 import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
 import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
+
+import Studijas from './components/Studijas/Studijas.js';
+import StudijasPievienot from './components/Studijas/StudijasPievienot.js';
 
 
 function App() {
@@ -24,8 +28,13 @@ function App() {
       <div className="App">
 
         <Switch>
+
+        <Route exact path="/studijas/pievienot"
+          render={() => <StudijasPievienot/>}>
+          </Route>
+
           <Route path="/studijas">
-            <h2 studijas/>
+            <Studijas/>
           </Route>
 
           
@@ -35,8 +44,8 @@ function App() {
 
           <Route exact path="/aktualitates/pievienot"
           render={() => <AktualitatesPievienot/>}>
-
           </Route>
+
           <Route path="/aktualitates">
             <Aktualitates/>
           </Route>

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './AktualitatesPievienot.scss';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
-import { tsConstructSignatureDeclaration } from '@babel/types';
 
 
 class AktualitatesPievienot extends Component{
