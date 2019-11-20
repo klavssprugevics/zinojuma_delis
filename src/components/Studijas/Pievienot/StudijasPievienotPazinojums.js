@@ -25,7 +25,6 @@ class StudijasPievienotPazinojums extends Component{
 
         const nosaukums = this.state.nosaukums;
         const apraksts = this.state.apraksts;
-        const onlyLettersRegex = /^[A-Za-z āēīūģķļņčšž]+$/;
 
 
         let isFormCorrect = true;
