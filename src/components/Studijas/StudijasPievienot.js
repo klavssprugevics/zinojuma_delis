@@ -3,6 +3,7 @@ import './StudijasPievienot.scss';
 import {Redirect} from 'react-router-dom';
 import './Pievienot/StudijasPievienotPazinojums.js'
 import StudijasPievienotPazinojums from './Pievienot/StudijasPievienotPazinojums.js';
+import StudijasPievienotLekcija from './Pievienot/StudijasPievienotLekcija.js';
 
 
 class StudijasPievienot extends Component{
@@ -61,7 +62,9 @@ class StudijasPievienot extends Component{
                             </div>
                         }
                         {this.state.selectLabel === "lekcija" &&
-                            <h1>this is lekcija</h1>
+                            <div>
+                                <StudijasPievienotLekcija/>
+                            </div>
                         }
                     </div>
 
