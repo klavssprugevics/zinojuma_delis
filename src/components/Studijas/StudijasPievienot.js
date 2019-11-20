@@ -48,22 +48,22 @@ class StudijasPievienot extends Component{
         {
             console.log(this.state.selectLabel);
             return(
-                <div>
-                    <select value={this.state.selectLabel} onChange={this.ChangeInput}>
+                <div className="pievienotForma">
+                    <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
                         <option value="pazinojums">Paziņojums</option>
                         <option value="lekcija">Lekcija</option>
                     </select>
 
-                    {this.state.selectLabel === "pazinojums" &&
-                        <div>
-                            <h1>this is pazinojums</h1>
-                            <StudijasPievienotPazinojums/>
-                        </div>
-                    }
-                    {this.state.selectLabel === "lekcija" &&
-                        <h1>this is lekcija</h1>
-                    }
-
+                    <div className="ievade">
+                        {this.state.selectLabel === "pazinojums" &&
+                            <div>
+                                <StudijasPievienotPazinojums/>
+                            </div>
+                        }
+                        {this.state.selectLabel === "lekcija" &&
+                            <h1>this is lekcija</h1>
+                        }
+                    </div>
 
 
                 </div>

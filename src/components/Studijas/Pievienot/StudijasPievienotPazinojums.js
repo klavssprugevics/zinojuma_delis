@@ -21,8 +21,13 @@ class StudijasPievienotPazinojums extends Component{
     render()
     {
         return(
-            <div>
-                <h1>yo from pazinojums</h1>
+            <div className ="inputFields">
+                <span className="pievienotPazinojumuVirsraksts">Pievieno jaunu paziņojumu!</span>
+                
+                <input className="textInput" name="nosaukums" type="text" placeholder="Nosaukums" value={this.state.nosaukums} onChange={evt => this.updateInput(evt)} /><br/>
+                <textarea className="textareaInput" name="apraksts" type="text" placeholder="Apraksts" value={this.state.apraksts}  onChange={evt => this.updateInput(evt)} /><br/>
+                
+                <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Publicēt!</button> 
             </div>
         );
     }
