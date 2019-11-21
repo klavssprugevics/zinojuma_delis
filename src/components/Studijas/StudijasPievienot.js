@@ -33,12 +33,6 @@ class StudijasPievienot extends Component{
         });
     }
 
-
-    componentDidMount()
-    {
-
-    }
-
     render()
     {
         if(this.state.submitPressed)

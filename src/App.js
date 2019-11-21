@@ -13,6 +13,7 @@ import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
 
 import Studijas from './components/Studijas/Studijas.js';
 import StudijasPievienot from './components/Studijas/StudijasPievienot.js';
+import LekcijasLabot from './components/Studijas/Labot/LekcijasLabot.js';
 
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
       <div className="App">
 
         <Switch>
+
+        <Route exact  path="/studijas/labot/:id" render={(props) => (
+          <LekcijasLabot key={props.match.params.id} {...props} />)
+          } />
 
         <Route exact path="/studijas/pievienot"
           render={() => <StudijasPievienot/>}>

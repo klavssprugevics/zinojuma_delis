@@ -22,9 +22,9 @@ class StudijasPievienotLekcija extends Component{
             datums: date,
             laiks: "12:00",
             kabinets: "",
+            statuss: ""
         }
         this.ParseInput = this.ParseInput.bind(this);
-        this.ChangeInput = this.ChangeInput.bind(this);
     }
 
     ParseInput()
@@ -32,7 +32,7 @@ class StudijasPievienotLekcija extends Component{
         const datums = this.state.datums;
         const laiks = this.state.laiks;
         const kabinets = this.state.kabinets;
-        const statuss = "Notiek";
+        const statuss = this.state.statuss;
         let kurss = "";
 
         if(this.state.selectLabel === "TimeklaTehn")
@@ -71,13 +71,6 @@ class StudijasPievienotLekcija extends Component{
 
     }
 
-    ChangeInput(event) {
-        this.setState({
-            selectLabel: event.target.value,
-        });
-    }
-
-
     render()
     {
         if(this.state.submitPressed)
@@ -89,9 +82,9 @@ class StudijasPievienotLekcija extends Component{
 
         return(
             <div className="forma"> 
-                <span className="pievienotLekcijuVirsraksts">Pievienot jaunu lekciju!</span>
+                <span className="pievienotLekcijuVirsraksts">Pievienot lekciju izmaiņas!</span>
                 
-                <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
+                <select className="selectBox" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                     <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>
                     <option value="dbteh">Datu bāzu tehnoloģijas 2019</option>
                 </select>
@@ -100,7 +93,12 @@ class StudijasPievienotLekcija extends Component{
                 <input className="laiksInput" name="laiks" type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
                 
                 <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
- 
+                
+                <select className="selectBox" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
+                    <option value="Notiek">Notiek</option>
+                    <option value="Atcelts">Atcelts</option>
+                </select>
+
                 <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Publicēt!</button> 
             </div>
         );

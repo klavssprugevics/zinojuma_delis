@@ -11,9 +11,9 @@ class AktualitatesLabot extends Component{
         this.state = 
         {
             isLoaded: false,
-            nosaukums: '',
-            apraksts: '',
-            autors: '',
+            nosaukums: "",
+            apraksts: "",
+            autors: "",
             submitPressed: false,
             deleted: false,
             errors: {},
@@ -43,7 +43,7 @@ class AktualitatesLabot extends Component{
         })
         .catch((error) =>
         {
-
+            //TODO
         })
                 
     }
