@@ -51,10 +51,11 @@ function App() {
           </Route>
 
           <Route path="/autostops">
-            <h2 autostops/>
+            <span autostops/>
           </Route>
+          
           <Route path="/">
-            <h2>Ziņojumu dēlis!</h2>
+            <span>Ziņojumu dēlis!</span>
           </Route>
         </Switch>
       </div>

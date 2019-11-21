@@ -47,7 +47,7 @@ class StudijasPievienot extends Component{
         }
         else
         {
-            console.log(this.state.selectLabel);
+            // console.log(this.state.selectLabel);
             return(
                 <div className="pievienotForma">
                     <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>

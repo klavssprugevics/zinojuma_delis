@@ -17,6 +17,7 @@ class StudijasPievienotPazinojums extends Component{
             isFormCorrect: true,
         }
         this.ParseInput = this.ParseInput.bind(this);
+        
     }
 
 
@@ -79,7 +80,7 @@ class StudijasPievienotPazinojums extends Component{
     {
         if(this.state.submitPressed)
         {
-            return <Redirect to="/pazinojumi" />
+            return <Redirect to="/studijas" />
         }
         else
         {

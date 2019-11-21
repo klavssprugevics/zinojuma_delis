@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import './StudijasPievienotLekcija.scss';
-
+import axios from 'axios';
 
 class StudijasPievienotLekcija extends Component{
 
@@ -20,15 +20,43 @@ class StudijasPievienotLekcija extends Component{
             submitPressed: false,
             selectLabel: "TimeklaTehn",
             datums: date,
-            laiks: "12:00"
+            laiks: "12:00",
+            kabinets: "",
         }
         this.ParseInput = this.ParseInput.bind(this);
+        this.ChangeInput = this.ChangeInput.bind(this);
     }
 
     ParseInput()
     {
-        console.log(this.state.datums);
-        console.log(this.state.laiks);
+        const datums = this.state.datums;
+        const laiks = this.state.laiks;
+        const kabinets = this.state.kabinets;
+        const statuss = "Notiek";
+        let kurss = "";
+
+        if(this.state.selectLabel === "TimeklaTehn")
+            kurss = "Tīmekļa tehnoloģijas 2019";
+        else if(this.state.selectLabel === "dbteh")
+            kurss = "Datu bāzu tehnoloģijas 2019";
+
+            
+        const data = {
+            "kurss": kurss,
+            "datums": datums,
+            "laiks": laiks,
+            "kabinets": kabinets,
+            "statuss": statuss
+        };
+
+
+        axios.post("http://localhost:5000/api/lekcijas", data)
+        .then(response => 
+        {
+            console.log(response)
+            this.setState({submitPressed: true});
+        })
+        .catch(error => console.log(error));
 
     }
 
@@ -37,7 +65,6 @@ class StudijasPievienotLekcija extends Component{
     {
         const target = event.target;
         const name = target.name;
-
         this.setState({
             [name]: event.target.value
           });
@@ -53,6 +80,13 @@ class StudijasPievienotLekcija extends Component{
 
     render()
     {
+        if(this.state.submitPressed)
+        {
+            return <Redirect to="/studijas" />
+        }
+        else
+        {
+
         return(
             <div className="forma"> 
                 <span className="pievienotLekcijuVirsraksts">Pievienot jaunu lekciju!</span>
@@ -62,12 +96,15 @@ class StudijasPievienotLekcija extends Component{
                     <option value="dbteh">Datu bāzu tehnoloģijas 2019</option>
                 </select>
 
-                <input type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
-                <input type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
-
+                <input className="datumsInput" name="datums" type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
+                <input className="laiksInput" name="laiks" type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
+                
+                <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
+ 
                 <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Publicēt!</button> 
             </div>
         );
+        }
     }
 
 }
