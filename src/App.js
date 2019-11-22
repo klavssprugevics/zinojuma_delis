@@ -79,11 +79,11 @@ function App() {
                 "statuss"
               ]}
               cssNames ={[
-                "aktNosaukums",
-                "aktApraksts",
-                "aktAutors",
-                "aktAutors",
-                "aktAutors"
+                "nosaukums",
+                "apraksts",
+                "autors",
+                "autors",
+                "autors"
               ]}
 
             />
