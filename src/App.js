@@ -18,6 +18,8 @@ import StudijasPievienot from './components/Studijas/StudijasPievienot.js';
 import LekcijasLabot from './components/Studijas/Labot/LekcijasLabot.js';
 
 
+import TestView from './components/test/TestView.js';
+
 
 function App() {
   return (
@@ -26,6 +28,67 @@ function App() {
       <div className="App">
 
         <Switch>
+
+          {/* TEST ROUTE */}
+
+          <Route path="/test">
+            <TestView
+              customMessage="hello aktualitates!"
+              urlParams="aktualitates"
+              fieldNames = {[
+                "nosaukums",
+                "apraksts",
+                "autors"
+              ]}
+              cssNames ={[
+                "nosaukums",
+                "apraksts",
+                "autors"
+              ]}
+            />
+          </Route>
+
+          {/* TEST ROUTE */}
+
+          <Route path="/test2">
+            <TestView
+              customMessage="hello pazinojumi!"
+              urlParams="pazinojumi"
+              fieldNames = {[
+                "nosaukums",
+                "apraksts"
+              ]}
+              cssNames ={[
+                "nosaukums",
+                "apraksts",
+              ]}
+            />
+          </Route>
+
+          {/* TEST ROUTE */}
+
+          <Route path="/test3">
+            <TestView
+              customMessage="hello lekcijas!"
+              urlParams="lekcijas"
+              fieldNames = {[
+                "kurss",
+                "datums",
+                "laiks",
+                "kabinets",
+                "statuss"
+              ]}
+              cssNames ={[
+                "aktNosaukums",
+                "aktApraksts",
+                "aktAutors",
+                "aktAutors",
+                "aktAutors"
+              ]}
+
+            />
+          </Route>
+
           <Route exact  path="/studijas/labot/:id" render={(props) => 
           (
             <LekcijasLabot key={props.match.params.id} {...props} />
@@ -38,7 +101,6 @@ function App() {
           <Route path="/studijas">
             <Studijas/>
           </Route>
-
           
           <Route exact  path="/aktualitates/labot/:id" render={(props) =>
           (

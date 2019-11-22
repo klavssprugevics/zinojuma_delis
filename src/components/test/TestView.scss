@@ -1,0 +1,93 @@
+$light_blue: #99D3DF;
+$blue: #88BBD6;
+$gray: #CDCDCD;
+$light_gray : #E9E9E9;
+
+.virsraksts
+{
+    margin-top: 30px;
+    margin-right: 200px;
+
+    font-style: italic;
+    font-size: 50px;
+    color: rgb(121, 114, 114);
+    text-align: center;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    .nosaukums
+    {
+
+
+        
+        font-style: bold;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .apraksts
+    {
+        margin: 20px;
+        font-size: 25px;
+        color: rgb(59, 54, 54);
+    }
+
+    .autors
+    {
+        margin-left: 20px;
+        font-size: 23px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+
+    .datums
+    {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .aktFooter
+    {
+        display: flex;
+        
+        .footerPoga
+        {
+            background-color: $light_gray;
+            border: none;
+            margin-left: 10px;
+        }
+
+
+        .editLink
+        {
+            border:none;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 18px;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            margin-right: 15px;
+
+            text-decoration: none;
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+        
+
+            background-color: $blue;
+        }
+
+        .editLink:hover
+        {
+            background-color: $light_blue;
+        }
+    }
+}

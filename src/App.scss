@@ -3,40 +3,8 @@ $blue: #88BBD6;
 $gray: #CDCDCD;
 $light_gray : #E9E9E9; 
 
-
 .App {
   background-color: $light_gray;
   min-height: 100vh;
   display: flex;
-}
-
-.NavBar
-{
-  display: flex;
-  justify-content: space-between;
-
-  background-color: $blue;
-
-  .NavLink
-  {
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-  
-    border-style: solid;
-    border-width: thin;
-  
-    padding-top: 10px;
-    padding-bottom: 10px;
-  
-    flex-basis: 50%;
-
-  }
-
-  .NavLink:hover
-  {
-    background-color: $light_blue;
-
-  }
 }
