@@ -79,11 +79,11 @@ class TestView extends Component{
                         {this.props.fieldNames.map((values, index) =>
                             <div key={values}>
                                 <span className={this.props.cssNames[index]}>{posts.datat[values]}</span><br/>
-                                {console.log(index)}
                             </div>
+
                         )}
-                        <div className="aktFooter">
-                            <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
+                        <div className="footer">
+                            <span className="timestamp">{timestampToDate(posts.datat.datums._seconds)}</span>
                             <button className="footerPoga" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
                             <NavLink className="editLink" to={`/${this.props.urlParams}/labot/${posts.id}`}>Labot</NavLink>
                         </div>
