@@ -3,9 +3,11 @@ import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  NavLink
+  Route
 } from "react-router-dom";
+
+import Header from './components/utils/Header.js';
+
 
 import Aktualitates from './components/Aktualitates/Aktualitates.js';
 import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
@@ -16,26 +18,21 @@ import StudijasPievienot from './components/Studijas/StudijasPievienot.js';
 import LekcijasLabot from './components/Studijas/Labot/LekcijasLabot.js';
 
 
+
 function App() {
   return (
     <Router>
-      <div className="NavBar">
-        <NavLink className="NavLink" to="/">Sākums</NavLink>
-        <NavLink className="NavLink" to="/studijas">Studiju info</NavLink>
-        <NavLink className="NavLink" to="/aktualitates">Aktualitātes</NavLink>
-        <NavLink className="NavLink" to="/autostops">Autostops</NavLink>
-      </div>
-
+      <Header/>
       <div className="App">
 
         <Switch>
+          <Route exact  path="/studijas/labot/:id" render={(props) => 
+          (
+            <LekcijasLabot key={props.match.params.id} {...props} />
+          )}/>
 
-        <Route exact  path="/studijas/labot/:id" render={(props) => (
-          <LekcijasLabot key={props.match.params.id} {...props} />)
-          } />
-
-        <Route exact path="/studijas/pievienot"
-          render={() => <StudijasPievienot/>}>
+          <Route exact path="/studijas/pievienot" render={() =>
+            <StudijasPievienot/>}>
           </Route>
 
           <Route path="/studijas">
@@ -43,12 +40,13 @@ function App() {
           </Route>
 
           
-          <Route exact  path="/aktualitates/labot/:id" render={(props) => (
-          <AktualitatesLabot key={props.match.params.id} {...props} />)
-          } />
+          <Route exact  path="/aktualitates/labot/:id" render={(props) =>
+          (
+            <AktualitatesLabot key={props.match.params.id} {...props} />
+          )}/>
 
-          <Route exact path="/aktualitates/pievienot"
-          render={() => <AktualitatesPievienot/>}>
+          <Route exact path="/aktualitates/pievienot" render={() =>
+             <AktualitatesPievienot/>}>
           </Route>
 
           <Route path="/aktualitates">
@@ -65,7 +63,6 @@ function App() {
         </Switch>
       </div>
     </Router>
-
   );  
 }
 
