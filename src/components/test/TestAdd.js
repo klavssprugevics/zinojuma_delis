@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 
-import StudijasPievienotPazinojums from './../Studijas/Pievienot/StudijasPievienotPazinojums.js';
-import StudijasPievienotLekcija from './../Studijas/Pievienot/StudijasPievienotLekcija.js';
+import AddPazinojums from './../Studijas/add/AddPazinojums.js';
+import AddLekcija from './../Studijas/add/AddLekcija.js';
 import AktualitatesPievienot from './../Aktualitates/AktualitatesPievienot.js';
 
+import './../utils/Design.scss';
+import './AddLayout.scss'
 
-class StudijasPievienot extends Component{
 
-    constructor(props)
+
+class TestAdd extends Component{
+
+    constructor()
     {
-        super(props);
+        super();
         this.state = 
         {
             submitPressed: false,
@@ -43,12 +47,13 @@ class StudijasPievienot extends Component{
                 case "pazinojums": return <Redirect to="/studijas"/>
                 case "lekcija": return <Redirect to="/studijas"/>
                 case "aktualitate": return <Redirect to="/aktualitates"/>
+                default: return <Redirect to="/aktualitates"/>
             }            
         }
         else
         {
             return(
-                <div className="pievienotForma">
+                <div className="addPage">
                     <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
                         <option value="pazinojums">Paziņojums</option>
                         <option value="lekcija">Lekcija</option>
@@ -58,12 +63,12 @@ class StudijasPievienot extends Component{
                     <div className="ievade">
                         {this.state.selectLabel === "pazinojums" &&
                             <div>
-                                <StudijasPievienotPazinojums/>
+                                <AddPazinojums/>
                             </div>
                         }
                         {this.state.selectLabel === "lekcija" &&
                             <div>
-                                <StudijasPievienotLekcija/>
+                                <AddLekcija/>
                             </div>
                         }
                         {this.state.selectLabel === "aktualitate" &&
@@ -72,8 +77,6 @@ class StudijasPievienot extends Component{
                             </div>
                         }
                     </div>
-
-
                 </div>
             );
         }
@@ -81,4 +84,4 @@ class StudijasPievienot extends Component{
     }
 }
 
-export default StudijasPievienot;
+export default TestAdd;

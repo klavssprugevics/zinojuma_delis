@@ -1,0 +1,59 @@
+$light_blue: #99D3DF;
+$blue: #88BBD6;
+$gray: #CDCDCD;
+$light_gray : #E9E9E9; 
+
+.pazinojumsForma
+{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+
+    .virsraksts
+    {
+
+        margin-bottom: 40px;
+        font-style: italic;
+        font-size: 50px;
+        color: rgb(121, 114, 114);
+        text-align: center;
+    }
+
+
+    .textInput
+    {
+        border: none;
+        width: 40%;
+        height: 40px;
+        font-size: 30px;
+        margin: 10px;
+        font-family: inherit;
+    }
+
+    .textareaInput
+    {
+        border: none;
+        width: 40%;
+        height: 400px;
+        font-size: 30px;
+        margin: 10px;
+        font-family: inherit;
+    }
+
+    .buttonPievienot
+    {
+        padding: 16px 32px;
+        width: 40%;
+    }
+
+    .errorMsg
+    {
+        margin: 5px;
+    }
+
+    .buttonPievienot:hover{
+        background-color: $light_blue;
+    }
+}

@@ -1,0 +1,107 @@
+.viewPage
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 100%;
+
+    .virsrakstsDiv
+    {
+        display: flex;
+        justify-content: center;
+
+        .virsraksts
+        {
+            margin-top: 30px;
+            margin-right: 200px;
+        }
+    }
+
+
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        
+        .nosaukums
+        {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .apraksts
+        {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .autors
+        {
+            display: flex;
+            margin-bottom: 20px;
+            margin-left: 15px;
+        }
+
+        .datums
+        {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .laiks
+        {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .kabinets
+        {
+            display: flex;
+            margin-left: 10px;
+        }
+
+
+
+        .footer
+        {
+            display: flex;
+            
+            .footerPoga
+            {
+                margin-left: 10px;
+            }
+
+            .editLink
+            {
+
+                padding: 10px;
+                padding-left: 15px;
+                padding-right: 18px;
+
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .loading
+    {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    .pievienotLink
+    {
+        margin: 30px;
+    }
+}
+
+hr
+{
+    width: 100%;
+    height: 1px; 
+}
+

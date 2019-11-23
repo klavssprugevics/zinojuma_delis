@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
-import './StudijasPievienotLekcija.scss';
 import axios from 'axios';
 
-class StudijasPievienotLekcija extends Component{
+import './LekcijaAddLayout.scss';
+import './../../utils/Design.scss';
+
+class AddLekcija extends Component{
 
     constructor()
     {
@@ -81,8 +83,8 @@ class StudijasPievienotLekcija extends Component{
         {
 
         return(
-            <div className="forma"> 
-                <span className="pievienotLekcijuVirsraksts">Pievienot lekciju izmaiņas!</span>
+            <div className="lekcijaForma"> 
+                <span className="virsraksts">Pievienot lekciju izmaiņas!</span>
                 
                 <select className="selectBox" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                     <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>
@@ -92,7 +94,7 @@ class StudijasPievienotLekcija extends Component{
                 <input className="datumsInput" name="datums" type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
                 <input className="laiksInput" name="laiks" type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
                 
-                <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
+                <input className="nosaukums" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
                 
                 <select className="selectBox" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
                     <option value="Notiek">Notiek</option>
@@ -107,4 +109,4 @@ class StudijasPievienotLekcija extends Component{
 
 }
 
-export default StudijasPievienotLekcija;
+export default AddLekcija;

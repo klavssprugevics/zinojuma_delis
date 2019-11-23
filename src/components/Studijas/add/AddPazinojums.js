@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import axios from 'axios';
-import './StudijasPievienotPazinojums.scss';
+
+import './PazinojumsAddLayout.scss';
+import './../../utils/Design.scss';
 
 class StudijasPievienotPazinojums extends Component{
 
@@ -86,8 +88,8 @@ class StudijasPievienotPazinojums extends Component{
         {
 
         return(
-            <div className ="inputFields">
-                <span className="pievienotPazinojumuVirsraksts">Pievieno jaunu paziņojumu!</span>
+            <div className ="pazinojumsForma">
+                <span className="virsraksts">Pievieno jaunu paziņojumu!</span>
                 
                 <input className="textInput" name="nosaukums" type="text" placeholder="Nosaukums" value={this.state.nosaukums} onChange={evt => this.updateInput(evt)} /><br/>
                 <div className="errorMsg">{this.state.errors.nosaukums}</div>

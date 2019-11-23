@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import './TestView.scss';
+// import './TestView.scss';
+
+import './ViewLayout.scss';
+import './../utils/Design.scss';
+
 import axios from 'axios';
 import {timestampToDate} from '.././utils/DateFunctions.js';
 import {NavLink} from "react-router-dom";
@@ -64,7 +68,7 @@ class TestView extends Component{
         else
         {
             return(
-            <div className="page">
+            <div className="viewPage">
                 <div className="virsrakstsDiv">
                     <h1 className="virsraksts">{this.props.customMessage}</h1>
                     <NavLink className="pievienotLink" to="/testadd">Pievienot info...</NavLink>
@@ -81,7 +85,7 @@ class TestView extends Component{
                         <div className="footer">
                             <span className="timestamp">{timestampToDate(posts.datat.timestamp._seconds)}</span>
                             <button className="footerPoga" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
-                            <NavLink className="editLink" to={`/${this.props.urlParams}/labot/${posts.id}`}>Labot</NavLink>
+                            <NavLink className="editLink" to={`/${this.props.urlParams}/${posts.id}`}>Labot</NavLink>
                         </div>
                         <hr/>
                     </div>)}

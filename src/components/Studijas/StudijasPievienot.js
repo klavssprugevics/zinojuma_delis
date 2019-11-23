@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import './StudijasPievienot.scss';
 import {Redirect} from 'react-router-dom';
-import './Pievienot/StudijasPievienotPazinojums.js'
-import StudijasPievienotPazinojums from './Pievienot/StudijasPievienotPazinojums.js';
-import StudijasPievienotLekcija from './Pievienot/StudijasPievienotLekcija.js';
+import AddPazinojums from './add/AddPazinojums.js';
+import AddLekcija from './add/Addlekcija.js';
 
 
 class StudijasPievienot extends Component{
@@ -52,12 +51,12 @@ class StudijasPievienot extends Component{
                     <div className="ievade">
                         {this.state.selectLabel === "pazinojums" &&
                             <div>
-                                <StudijasPievienotPazinojums/>
+                                <AddPazinojums/>
                             </div>
                         }
                         {this.state.selectLabel === "lekcija" &&
                             <div>
-                                <StudijasPievienotLekcija/>
+                                <AddLekcija/>
                             </div>
                         }
                     </div>
