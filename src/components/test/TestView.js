@@ -67,7 +67,7 @@ class TestView extends Component{
             <div className="page">
                 <div className="virsrakstsPievienot">
                     <h1 className="virsraksts">{this.props.customMessage}</h1>
-                    <NavLink className="pievienotLink" to={`/${this.props.urlParams}/pievienot`}>Pievienot aktualitāti!</NavLink>
+                    <NavLink className="pievienotLink" to="/testadd">Pievienot info...</NavLink>
                 </div>
                 <ul>
                     {this.state.response[this.props.urlParams].map(posts => 
@@ -88,11 +88,8 @@ class TestView extends Component{
                 </ul>
             </div>
             );
-            
         }
- 
     }
 }
-
 
 export default TestView;

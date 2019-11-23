@@ -19,6 +19,7 @@ import LekcijasLabot from './components/Studijas/Labot/LekcijasLabot.js';
 
 
 import TestView from './components/test/TestView.js';
+import TestAdd from './components/test/TestAdd.js';
 
 
 function App() {
@@ -85,9 +86,17 @@ function App() {
                 "kabinets",
                 "statuss"
               ]}
-
             />
           </Route>
+
+          {/* TEST ROUTE */}
+
+          <Route path="/testadd">
+              <TestAdd/>
+            </Route>
+
+
+
 
           <Route exact  path="/studijas/labot/:id" render={(props) => 
           (

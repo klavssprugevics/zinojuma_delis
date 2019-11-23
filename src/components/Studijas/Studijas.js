@@ -27,8 +27,6 @@ class Studijas extends Component{
     {
         return(
             <div className="pageStuff">
-                <NavLink className="studijasPievienot" to={`/studijas/pievienot`}>Pievienot info</NavLink>
-
                 <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
                     <option value="pazinojums">Paziņojumi</option>
                     <option value="lekcija">Lekciju izmaiņas</option>
