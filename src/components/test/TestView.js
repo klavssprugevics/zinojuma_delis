@@ -83,7 +83,7 @@ class TestView extends Component{
 
                         )}
                         <div className="footer">
-                            <span className="timestamp">{timestampToDate(posts.datat.datums._seconds)}</span>
+                            <span className="timestamp">{timestampToDate(posts.datat.timestamp._seconds)}</span>
                             <button className="footerPoga" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
                             <NavLink className="editLink" to={`/${this.props.urlParams}/labot/${posts.id}`}>Labot</NavLink>
                         </div>

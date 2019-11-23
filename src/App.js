@@ -33,7 +33,7 @@ function App() {
 
           <Route path="/test">
             <TestView
-              customMessage="hello aktualitates!"
+              customMessage="Jaunākais studentu dzīvē!"
               urlParams="aktualitates"
               fieldNames = {[
                 "nosaukums",
@@ -52,7 +52,7 @@ function App() {
 
           <Route path="/test2">
             <TestView
-              customMessage="hello pazinojumi!"
+              customMessage="Jaunākie paziņojumi studijās!"
               urlParams="pazinojumi"
               fieldNames = {[
                 "nosaukums",
@@ -69,7 +69,7 @@ function App() {
 
           <Route path="/test3">
             <TestView
-              customMessage="hello lekcijas!"
+              customMessage="Lekciju izmaiņas"
               urlParams="lekcijas"
               fieldNames = {[
                 "kurss",
@@ -80,10 +80,10 @@ function App() {
               ]}
               cssNames ={[
                 "nosaukums",
-                "apraksts",
-                "autors",
-                "autors",
-                "autors"
+                "datums",
+                "laiks",
+                "kabinets",
+                "statuss"
               ]}
 
             />

@@ -32,5 +32,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.venta.lv/s7_spruge_k/tt2019_kursadarbs_zinojuma_delis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

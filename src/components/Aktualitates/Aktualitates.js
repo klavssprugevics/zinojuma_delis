@@ -77,7 +77,7 @@ class Aktualitates extends Component{
                         <span className ="aktApraksts">{posts.datat.apraksts}</span><br/>
                         <span className="aktAutors">{posts.datat.autors}</span><br/>
                         <div className="aktFooter">
-                            <span className="aktDatums">{timestampToDate(posts.datat.datums._seconds)}</span>
+                            <span className="aktDatums">{timestampToDate(posts.datat.timestamp._seconds)}</span>
                             <button className="footerPoga" type="button" onClick={() => this.DeletePost(posts.id)}><i className="fa fa-trash fa-2x"></i></button>
                             <NavLink className="editLink" to={`/aktualitates/labot/${posts.id}`}>Labot</NavLink>
                         </div>

@@ -55,6 +55,39 @@ $light_gray : #E9E9E9;
             
         }
 
+        .datums
+        {
+            display: flex;
+            margin-left: 10px;
+
+            font-size: 35px;
+        }
+
+        .laiks
+        {
+            display: flex;
+            margin-left: 10px;
+
+            font-size: 28px;
+            font-style: italic;
+        }
+
+        .kabinets
+        {
+            display: flex;
+            margin-left: 10px;
+            
+            font-size: 25px;
+        }
+
+        .statuss
+        {
+            
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
         .footer
         {
             display: flex;
