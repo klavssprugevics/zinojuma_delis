@@ -30,7 +30,7 @@ class TestView extends Component{
         this.getData();
         // console.log(this.props.customMessage);
         // console.log(this.props.urlParams);
-        console.log(this.props.fieldNames[0]);
+        // console.log(this.props.fieldNames[0]);
 
     }
 

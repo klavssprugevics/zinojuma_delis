@@ -21,7 +21,6 @@ class Header extends Component{
             <NavLink className="NavLink" to="/">Sākums</NavLink>
             <NavLink className="NavLink" to="/studijas">Studiju info</NavLink>
             <NavLink className="NavLink" to="/aktualitates">Aktualitātes</NavLink>
-            <NavLink className="NavLink" to="/autostops">Autostops</NavLink>
         </div>
         );
     }

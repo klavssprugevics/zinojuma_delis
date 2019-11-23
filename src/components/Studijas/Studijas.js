@@ -3,6 +3,8 @@ import './Studijas.scss';
 import {NavLink} from "react-router-dom";
 import StudijasSkatitPazinojumi from './Skatit/StudijasSkatitPazinojumi.js';
 import StudijasSkatitLekcijas from './Skatit/StudijasSkatitLekcijas.js';
+import {Redirect} from 'react-router-dom';
+import TestView from './../test/TestView.js';
 
 
 class Studijas extends Component{
@@ -36,14 +38,39 @@ class Studijas extends Component{
                 </select>
                 <div className="izvelne">
                     {this.state.selectLabel === "pazinojums" &&
-                        <div>
-                            <StudijasSkatitPazinojumi/>
-                        </div>
+                        <TestView
+                        customMessage="Jaunākie paziņojumi studijās!"
+                        urlParams="pazinojumi"
+                        fieldNames = {[
+                        "nosaukums",
+                        "apraksts"
+                        ]}
+                        cssNames ={[
+                        "nosaukums",
+                        "apraksts",
+                        ]}
+                        />
+                    
                     }
                     {this.state.selectLabel === "lekcija" &&
-                        <div>
-                            <StudijasSkatitLekcijas/>
-                        </div>
+                            <TestView
+                            customMessage="Lekciju izmaiņas"
+                            urlParams="lekcijas"
+                            fieldNames = {[
+                                "kurss",
+                                "datums",
+                                "laiks",
+                                "kabinets",
+                                "statuss"
+                            ]}
+                            cssNames ={[
+                                "nosaukums",
+                                "datums",
+                                "laiks",
+                                "kabinets",
+                                "statuss"
+                            ]}
+                            />
                     }
                 </div>
             
