@@ -10,17 +10,24 @@ $light_gray : #E9E9E9;
     margin: 20px;
     width: 100%;
 
-    .virsraksts
+    .virsrakstsDiv
     {
-        margin-top: 30px;
-        margin-right: 200px;
+        display: flex;
+        justify-content: center;
 
-        font-style: italic;
-        font-size: 50px;
-        color: rgb(121, 114, 114);
-        text-align: center;
+        .virsraksts
+        {
+            margin-top: 30px;
+            margin-right: 200px;
+
+            font-style: italic;
+            font-size: 50px;
+            color: rgb(121, 114, 114);
+            text-align: center;
+        }
     }
-    
+
+
     .info
     {
         display: flex;

@@ -65,7 +65,7 @@ class TestView extends Component{
         {
             return(
             <div className="page">
-                <div className="virsrakstsPievienot">
+                <div className="virsrakstsDiv">
                     <h1 className="virsraksts">{this.props.customMessage}</h1>
                     <NavLink className="pievienotLink" to="/testadd">Pievienot info...</NavLink>
                 </div>

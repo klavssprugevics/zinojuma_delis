@@ -9,7 +9,7 @@ import {
 import Header from './components/utils/Header.js';
 
 
-import Aktualitates from './components/Aktualitates/Aktualitates.js';
+// import Aktualitates from './components/Aktualitates/Aktualitates.js';
 import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
 import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
 
