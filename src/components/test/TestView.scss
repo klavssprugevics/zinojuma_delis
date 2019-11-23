@@ -5,7 +5,8 @@ $light_gray : #E9E9E9;
 
 .page
 {
-    width: 99%;
+    width: 95%;
+    margin-left: 50px;
 
     .virsraksts
     {
@@ -17,7 +18,7 @@ $light_gray : #E9E9E9;
         color: rgb(121, 114, 114);
         text-align: center;
     }
-
+    
     .info
     {
         display: flex;
@@ -138,7 +139,28 @@ $light_gray : #E9E9E9;
         justify-content: center;
         margin: auto;
     }
+
+
+    .pievienotLink
+{
+    margin: 30px;
+
+    text-decoration: none;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+
+    border:none;
+    padding: 20px;
+    background-color: $blue;
 }
+
+.pievienotLink:hover{
+    background-color: $light_blue;
+}
+
+}
+
 hr
 {
     width: 100%;

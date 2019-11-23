@@ -22,23 +22,7 @@ $light_gray : #E9E9E9;
     justify-content: center;
 }
 
-.pievienotLink
-{
-    margin: 30px;
 
-    text-decoration: none;
-    font-style: italic;
-    font-size: 30px;
-    color: white;
-
-    border:none;
-    padding: 20px;
-    background-color: $blue;
-}
-
-.pievienotLink:hover{
-    background-color: $light_blue;
-}
 
 .posts
 {

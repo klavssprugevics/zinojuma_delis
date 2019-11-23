@@ -32,11 +32,13 @@ class Studijas extends Component{
         return(
             <div>
                 <NavLink className="studijasPievienot" to={`/studijas/pievienot`}>Pievienot info</NavLink>
+
                 <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
                         <option value="pazinojums">Paziņojums</option>
                         <option value="lekcija">Lekcija</option>
                 </select>
-                <div className="izvelne">
+               
+                <div>
                     {this.state.selectLabel === "pazinojums" &&
                         <TestView
                         customMessage="Jaunākie paziņojumi studijās!"
