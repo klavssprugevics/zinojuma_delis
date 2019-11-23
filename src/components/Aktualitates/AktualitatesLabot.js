@@ -65,7 +65,7 @@ class AktualitatesLabot extends Component{
         const nosaukums = this.state.nosaukums;
         const apraksts = this.state.apraksts;
         const autors  = this.state.autors;
-        const onlyLettersRegex = /^[A-Za-z āēīūģķļņčšž]+$/;
+        const onlyLettersRegex = /^[A-Za-z āēīūģķļņčšžĀĒĪŪĢĶĻŅČŠŽ]+$/;
 
         let isFormCorrect = true;
         let errors = {};
