@@ -112,7 +112,20 @@ function App() {
           </Route>
 
           <Route path="/aktualitates">
-            <Aktualitates/>
+            <TestView
+                customMessage="Jaunākais studentu dzīvē!"
+                urlParams="aktualitates"
+                fieldNames = {[
+                  "nosaukums",
+                  "apraksts",
+                  "autors"
+                ]}
+                cssNames ={[
+                  "nosaukums",
+                  "apraksts",
+                  "autors"
+                ]}
+              />
           </Route>
 
           <Route path="/autostops">

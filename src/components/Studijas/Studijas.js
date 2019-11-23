@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
-import './Studijas.scss';
 import {NavLink} from "react-router-dom";
-import StudijasSkatitPazinojumi from './Skatit/StudijasSkatitPazinojumi.js';
-import StudijasSkatitLekcijas from './Skatit/StudijasSkatitLekcijas.js';
-import {Redirect} from 'react-router-dom';
 import TestView from './../test/TestView.js';
-
+import './Studijas.scss';
 
 class Studijas extends Component{
 
@@ -30,12 +26,12 @@ class Studijas extends Component{
     render()
     {
         return(
-            <div>
+            <div className="pageStuff">
                 <NavLink className="studijasPievienot" to={`/studijas/pievienot`}>Pievienot info</NavLink>
 
                 <select className="selectBox" value={this.state.selectLabel} onChange={this.ChangeInput}>
-                        <option value="pazinojums">Paziņojums</option>
-                        <option value="lekcija">Lekcija</option>
+                    <option value="pazinojums">Paziņojumi</option>
+                    <option value="lekcija">Lekciju izmaiņas</option>
                 </select>
                
                 <div>

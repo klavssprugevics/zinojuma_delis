@@ -28,10 +28,6 @@ class TestView extends Component{
     componentDidMount()
     {
         this.getData();
-        // console.log(this.props.customMessage);
-        // console.log(this.props.urlParams);
-        // console.log(this.props.fieldNames[0]);
-
     }
 
     getData()
