@@ -3,7 +3,6 @@ $blue: #88BBD6;
 $gray: #CDCDCD;
 $light_gray : #E9E9E9;
 
-
 .virsraksts
 {
 font-style: italic;
@@ -86,8 +85,6 @@ font-style: italic;
     background-color: $light_blue;
 }
 
-
-
 .pievienotLink
 {
     text-decoration: none;
@@ -150,6 +147,20 @@ font-style: italic;
     text-align: center;
     color: red;
 
+}
+
+.buttonDzest
+{
+    background-color: rgb(158, 17, 17);
+    border: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.buttonDzest:hover{
+    background-color: rgb(167, 57, 57);
+    
 }
 
 hr

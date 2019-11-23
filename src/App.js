@@ -9,13 +9,11 @@ import {
 import Header from './components/utils/Header.js';
 
 
-// import Aktualitates from './components/Aktualitates/Aktualitates.js';
-// import AktualitatesPievienot from './components/Aktualitates/AktualitatesPievienot.js';
 import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
 
 import Studijas from './components/Studijas/Studijas.js';
-// import StudijasPievienot from './components/Studijas/StudijasPievienot.js';
-import LekcijasLabot from './components/Studijas/Labot/LekcijasLabot.js';
+
+import EditLekcija from './components/Studijas/edit/EditLekcija.js';
 
 
 import TestView from './components/test/TestView.js';
@@ -98,7 +96,7 @@ function App() {
 
           <Route exact  path="/lekcijas/:id" render={(props) => 
           (
-            <LekcijasLabot key={props.match.params.id} {...props} />
+            <EditLekcija key={props.match.params.id} {...props} />
           )}/>
 
           {/* <Route exact path="/studijas/pievienot" render={() =>

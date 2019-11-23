@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import axios from 'axios';
 
-import './LekcijaAddLayout.scss';
+import './AddLekcijaLayout.scss';
 import './../../utils/Design.scss';
 
 class AddLekcija extends Component{

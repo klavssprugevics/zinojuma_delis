@@ -6,7 +6,7 @@ import AddLekcija from './../Studijas/add/AddLekcija.js';
 import AktualitatesPievienot from './../Aktualitates/AktualitatesPievienot.js';
 
 import './../utils/Design.scss';
-import './AddLayout.scss'
+import './TestAddLayout.scss'
 
 
 

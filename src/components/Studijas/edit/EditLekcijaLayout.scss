@@ -1,0 +1,45 @@
+.lekcijaForma
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    .virsraksts
+    {
+
+        margin-bottom: 40px;
+    }
+
+    .apraksts
+    {
+        width: 40%;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .textareaInput
+    {
+        width: 40%;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .buttonLabot
+    {
+        padding: 16px 32px;
+        width: 40%;
+    }
+
+    .buttonDzest
+    {
+        padding: 16px 32px;
+        width: 40%;
+        margin-top: 20px;
+    }
+
+    .errorMsg
+    {
+        margin: 5px;
+    }
+}

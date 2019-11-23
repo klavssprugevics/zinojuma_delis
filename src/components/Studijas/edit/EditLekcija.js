@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
-import './LekcijasLabot.scss';
+import './EditLekcijaLayout.scss';
+import './../../utils/Design.scss';
 
-class LekcijasLabot extends Component{
+class EditLekcija extends Component{
 
     constructor(props)
     {
@@ -136,8 +137,8 @@ class LekcijasLabot extends Component{
             else
             {
                 return(
-                    <div className="forma"> 
-                    <span className="pievienotLekcijuVirsraksts">Pievienot lekciju izmaiņas!</span>
+                    <div className="lekcijaForma"> 
+                    <span className="virsraksts">Pievienot lekciju izmaiņas!</span>
                     
                     <select className="selectBox" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                         <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>
@@ -147,7 +148,7 @@ class LekcijasLabot extends Component{
                     <input className="datumsInput" name="datums" type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
                     <input className="laiksInput" name="laiks" type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
                     
-                    <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
+                    <input className="apraksts" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
                     
                     <select className="selectBox" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
                         <option value="Notiek">Notiek</option>
@@ -166,4 +167,4 @@ class LekcijasLabot extends Component{
 }
 
 
-export default LekcijasLabot;
+export default EditLekcija;

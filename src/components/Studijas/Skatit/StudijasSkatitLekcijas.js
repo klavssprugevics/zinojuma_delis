@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {timestampToDate} from '../.././utils/DateFunctions.js';
+import {timestampToDate} from '../../../utils/DateFunctions.js';
 import {NavLink} from "react-router-dom";
 
 class StudijasSkatitLekcijas extends Component{

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 import axios from 'axios';
 
-import './PazinojumsAddLayout.scss';
+import './AddPazinojumsLayout.scss';
 import './../../utils/Design.scss';
 
 class StudijasPievienotPazinojums extends Component{

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import './TestView.scss';
 
-import './ViewLayout.scss';
+import './TestViewLayout.scss';
 import './../utils/Design.scss';
 
 import axios from 'axios';
