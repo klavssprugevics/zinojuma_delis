@@ -47,7 +47,7 @@ class ViewInfoMini extends Component{
             return(
             <div className="viewPageMini">
                 <ul>
-                    {this.state.response[this.props.urlParams].slice(0,2).map(posts => 
+                    {this.state.response[this.props.urlParams].slice(0,3).map(posts => 
                     <div className="info" key={posts.id}>
                         {this.props.fieldNames.map((values, index) =>
                             <div key={values}>

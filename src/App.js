@@ -7,8 +7,10 @@ import {
 } from "react-router-dom";
 
 import Header from './components/utils/Header.js';
-import Studijas from './components/studijas/Studijas.js';
 import Home from './components/sakums/Home.js';
+import Footer from './components/utils/Footer.js';
+
+import Studijas from './components/studijas/Studijas.js';
 
 import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
 import EditLekcija from './components/studijas/edit/EditLekcija.js';
@@ -69,6 +71,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer/>
     </Router>
   );  
 }

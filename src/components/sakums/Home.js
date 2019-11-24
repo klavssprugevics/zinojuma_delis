@@ -19,6 +19,7 @@ class Home extends Component
     {
         return(
             <div>
+                <h1 className="virsraksts">Sveiks, student!</h1>
                 <div className="miniDisplay">
                     <div className="miniPazinojumi">
 
