@@ -24,7 +24,6 @@ class Home extends Component
                     <div className="miniPazinojumi">
 
                         <span className="virsraksts">Jaunākie paziņojumi</span>
-                        <hr/>
                         <ViewInfoMini
                             urlParams="pazinojumi"
                             fieldNames = {[
@@ -40,7 +39,6 @@ class Home extends Component
                     <div className="miniPazinojumi">
 
                         <span className="virsraksts">Jaunākās lekciju izmaiņas</span>
-                        <hr/>
                         <ViewInfoMini
                             urlParams="lekcijas"
                             fieldNames = {[

@@ -49,13 +49,13 @@ class ViewInfoMini extends Component{
                 <ul>
                     {this.state.response[this.props.urlParams].slice(0,3).map(posts => 
                     <div className="info" key={posts.id}>
+                        <hr/>
                         {this.props.fieldNames.map((values, index) =>
                             <div key={values}>
                                 <span className={this.props.cssNames[index]}>{posts.datat[values]}</span><br/>
                             </div>
                         )}
                         <span className="timestamp">{timestampToDate(posts.datat.timestamp._seconds)}</span>
-                        <hr/>
                     </div>)}
                 </ul>
             </div>
