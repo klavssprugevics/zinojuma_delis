@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import './AktualitatesPievienot.scss';
+// import './../AktualitatesPievienot.scss';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+import './AddAktualitateLayout.scss';
 
 
-class AktualitatesPievienot extends Component{
+class AddAktualitate extends Component{
 
     constructor()
     {
@@ -100,7 +101,7 @@ class AktualitatesPievienot extends Component{
         {
             return(
                 <div className="inputFields">
-                    <span className="pievienotAktualitatiVirsraksts">Pievieno jaunu aktualitāti!</span>
+                    <span className="virsraksts">Pievieno jaunu aktualitāti!</span>
                     
                     <input className="textInput" name="nosaukums" type="text" placeholder="Nosaukums" value={this.state.nosaukums} onChange={evt => this.updateInput(evt)} /><br/>
                     <div className="errorMsg">{this.state.errors.nosaukums}</div>
@@ -119,4 +120,4 @@ class AktualitatesPievienot extends Component{
 
 
 }
-export default AktualitatesPievienot;
+export default AddAktualitate;

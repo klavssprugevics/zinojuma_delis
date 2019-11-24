@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 
-import AddPazinojums from './../Studijas/add/AddPazinojums.js';
-import AddLekcija from './../Studijas/add/AddLekcija.js';
-import AktualitatesPievienot from './../Aktualitates/AktualitatesPievienot.js';
+import AddPazinojums from './../studijas/add/AddPazinojums.js';
+import AddLekcija from './../studijas/add/AddLekcija.js';
+import AddAktualitate from './../aktualitates/add/AddAktualitate.js';
 
 import './../utils/Design.scss';
 import './TestAddLayout.scss'
@@ -73,7 +73,7 @@ class TestAdd extends Component{
                         }
                         {this.state.selectLabel === "aktualitate" &&
                             <div>
-                                <AktualitatesPievienot/>
+                                <AddAktualitate/>
                             </div>
                         }
                     </div>

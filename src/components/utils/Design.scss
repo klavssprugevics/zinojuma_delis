@@ -141,6 +141,10 @@ font-style: italic;
     font-size: 20px;
 }
 
+.buttonPievienot:hover{
+    background-color: $light_blue;
+}
+
 .errorMsg
 {
     font-size: 20px;
@@ -161,6 +165,21 @@ font-style: italic;
 .buttonDzest:hover{
     background-color: rgb(167, 57, 57);
     
+}
+
+.textInput
+{
+    border: none;
+    font-size: 30px;
+    font-family: inherit;
+}
+
+
+.textareaInput
+{
+    border: none;
+    font-size: 30px;
+    font-family: inherit;
 }
 
 hr

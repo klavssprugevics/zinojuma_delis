@@ -1,4 +1,4 @@
-.pazinojumsForma
+.inputFields
 {
     display:flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
         width: 40%;
         height: 40px;
         margin: 10px;
+        font-family: inherit;
     }
 
     .textareaInput
@@ -23,6 +24,7 @@
         width: 40%;
         height: 400px;
         margin: 10px;
+        font-family: inherit;
     }
 
     .buttonPievienot

@@ -14,13 +14,11 @@ class Studijas extends Component{
         this.ChangeInput = this.ChangeInput.bind(this);
     }
     
-
     ChangeInput(event) {
         this.setState({
             selectLabel: event.target.value,
         });
     }
-
 
     render()
     {
@@ -48,27 +46,26 @@ class Studijas extends Component{
                     
                     }
                     {this.state.selectLabel === "lekcija" &&
-                            <TestView
-                            customMessage="Lekciju izmaiņas"
-                            urlParams="lekcijas"
-                            fieldNames = {[
-                                "kurss",
-                                "datums",
-                                "laiks",
-                                "kabinets",
-                                "statuss"
-                            ]}
-                            cssNames ={[
-                                "nosaukums",
-                                "datums",
-                                "laiks",
-                                "kabinets",
-                                "statuss"
-                            ]}
-                            />
+                        <TestView
+                        customMessage="Lekciju izmaiņas"
+                        urlParams="lekcijas"
+                        fieldNames = {[
+                            "kurss",
+                            "datums",
+                            "laiks",
+                            "kabinets",
+                            "statuss"
+                        ]}
+                        cssNames ={[
+                            "nosaukums",
+                            "datums",
+                            "laiks",
+                            "kabinets",
+                            "statuss"
+                        ]}
+                        />
                     }
                 </div>
-            
             </div>
         );
     }

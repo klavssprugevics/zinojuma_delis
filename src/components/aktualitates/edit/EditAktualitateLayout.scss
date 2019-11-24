@@ -1,4 +1,4 @@
-.pazinojumsForma
+.editFields
 {
     display:flex;
     flex-direction: column;
@@ -13,9 +13,12 @@
 
     .textInput
     {
+        border: none;
         width: 40%;
         height: 40px;
+        font-size: 30px;
         margin: 10px;
+        font-family: inherit;
     }
 
     .textareaInput
@@ -25,12 +28,25 @@
         margin: 10px;
     }
 
+    .buttonLabot
+    {
+        padding: 16px 32px;
+        margin-bottom: 10px;
+        width: 40%;
+    }
+
     .buttonPievienot
     {
         padding: 16px 32px;
         width: 40%;
+        margin-bottom: 20px;
     }
 
+    .buttonDzest
+    {
+        padding: 16px 32px;
+        width: 40%;
+    }
     .errorMsg
     {
         margin: 5px;

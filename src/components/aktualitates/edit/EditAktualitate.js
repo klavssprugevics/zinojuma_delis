@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import './AktualitatesLabot.scss';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+import './EditAktualitateLayout.scss';
 
-class AktualitatesLabot extends Component{
+class EditAktualitate extends Component{
 
     constructor(props)
     {
@@ -146,7 +146,7 @@ class AktualitatesLabot extends Component{
             {
                 return(
                     <div className="editFields">
-                        <span className="editAktVirsraksts">Labošana...</span>
+                        <span className="virsraksts">Labošana...</span>
                         
                         <input className="textInput" name="nosaukums" type="text" placeholder="Nosaukums" value={this.state.nosaukums} onChange={evt => this.updateInput(evt)} /><br/>
                         <div className="errorMsg">{this.state.errors.nosaukums}</div>
@@ -157,14 +157,13 @@ class AktualitatesLabot extends Component{
                         <input className="textInput" name="autors" type="text" placeholder="Autors" value={this.state.autors} onChange={evt => this.updateInput(evt)} /><br/>
                         <div className="errorMsg">{this.state.errors.autors}</div>
 
-                        <button className="buttonLabot" type="button" onClick={this.ParseInput}>Labot!</button> 
+                        <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Labot!</button> 
                         <button className="buttonDzest" type="button" onClick={this.DeletePost}>Dzēst!</button> 
 
                     </div>)
             }
         }
     }
-
 }
 
-export default AktualitatesLabot;
+export default EditAktualitate;

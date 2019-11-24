@@ -9,11 +9,11 @@ import {
 import Header from './components/utils/Header.js';
 
 
-import AktualitatesLabot from './components/Aktualitates/AktualitatesLabot';
+import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
 
-import Studijas from './components/Studijas/Studijas.js';
+import Studijas from './components/studijas/Studijas.js';
 
-import EditLekcija from './components/Studijas/edit/EditLekcija.js';
+import EditLekcija from './components/studijas/edit/EditLekcija.js';
 
 
 import TestView from './components/test/TestView.js';
@@ -109,7 +109,7 @@ function App() {
           
           <Route exact  path="/aktualitates/:id" render={(props) =>
           (
-            <AktualitatesLabot key={props.match.params.id} {...props} />
+            <EditAktualitate key={props.match.params.id} {...props} />
           )}/>
 
           {/* <Route exact path="/aktualitates/pievienot" render={() =>
