@@ -29,7 +29,8 @@ class ViewInfo extends Component{
             keyword: "",
             delete: false,
             isSearchPressed: false,
-            isLoaded: false
+            isLoaded: false,
+            noResults: false,
         }
         this.DeletePost = this.DeletePost.bind(this);
         this.SearchPost = this.SearchPost.bind(this);
@@ -50,6 +51,7 @@ class ViewInfo extends Component{
                 originalResponse: res.data,
                 response: res.data, 
                 isLoaded: true,
+                noResults: false
             }, () =>
             {
                 this.SearchPost();
@@ -96,6 +98,13 @@ class ViewInfo extends Component{
             return posts.datat[this.props.fieldNames[0]].toUpperCase().includes(this.state.keyword.toUpperCase())
         });
         
+        if(newPosts.length === 0)
+        {
+            this.setState({
+                noResults: true
+            })
+        }
+
         // Izveidojam jaunu response objektu, ar kuru aizvietot veco.
         let newResponse = this.state.response;
         newResponse[this.props.urlParams] = [];
@@ -118,7 +127,7 @@ class ViewInfo extends Component{
     {
         this.setState({
             keyword: "",
-            isSearchPressed: false
+            isSearchPressed: false,
         })
         this.getData();
     }
@@ -142,6 +151,7 @@ class ViewInfo extends Component{
                     <button className="buttonPievienot" type="button" onClick={() => this.getData()}>Meklēt!</button>
                     {this.state.isSearchPressed === true && <button className="cancelSearch" type="button" onClick={() => this.ResetSearch()}><i className="fa fa-times-circle fa-2x"></i></button>}     
                 </div>
+                {this.state.noResults === true && <span className="navRez">Nav rezultātu</span>}  
                 <ul>
                     {/* Tiek iterēts cauri visiem iegūtajiem objektiem no response,
                     un to attiecīgie lauki (no this.props.fieldNames) tiek renderēti. */}
