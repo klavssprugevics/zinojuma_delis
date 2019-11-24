@@ -41,10 +41,7 @@ class EditAktualitate extends Component{
                 autors: res.data.autors,
                 isLoaded: true});
         })
-        .catch((error) =>
-        {
-            //TODO
-        })
+        .catch(error => console.log(error));
                 
     }
 

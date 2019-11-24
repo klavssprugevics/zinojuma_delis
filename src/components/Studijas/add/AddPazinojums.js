@@ -12,8 +12,8 @@ class StudijasPievienotPazinojums extends Component{
         super();
         this.state = 
         {            
-            nosaukums: '',
-            apraksts: '',
+            nosaukums: "",
+            apraksts: "",
             submitPressed: false,
             errors: {},
             isFormCorrect: true,
@@ -51,7 +51,6 @@ class StudijasPievienotPazinojums extends Component{
 
         if(isFormCorrect)
         {
-          
             axios.post("http://localhost:5000/api/pazinojumi", data)
             .then(response => 
             {
@@ -64,7 +63,6 @@ class StudijasPievienotPazinojums extends Component{
             isFormCorrect,
             errors
         })
-
     }
 
     updateInput(event)

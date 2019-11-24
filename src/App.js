@@ -8,8 +8,11 @@ import {
 
 import Header from './components/utils/Header.js';
 import Studijas from './components/studijas/Studijas.js';
+
 import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
 import EditLekcija from './components/studijas/edit/EditLekcija.js';
+import EditPazinojums from './components/studijas/edit/EditPazinojums.js';
+
 import ViewInfo from './components/shared-functions/ViewInfo.js';
 import AddInfo from './components/shared-functions/AddInfo.js';
 
@@ -27,6 +30,11 @@ function App() {
           <Route exact  path="/lekcijas/:id" render={(props) => 
           (
             <EditLekcija key={props.match.params.id} {...props} />
+          )}/>
+
+          <Route exact  path="/pazinojumi/:id" render={(props) => 
+          (
+            <EditPazinojums key={props.match.params.id} {...props} />
           )}/>
 
           <Route path="/studijas">

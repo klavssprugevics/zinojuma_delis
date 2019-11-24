@@ -38,7 +38,7 @@ class EditLekcija extends Component{
     
     getData()
     {
-        // Atgūstam konkrēto aktualitāti
+        // Atgūstam konkrēto lekciju
         axios.get(`http://localhost:5000/api/lekcijas/` + this.props.match.params.id)
         .then(res =>
         {
@@ -55,10 +55,7 @@ class EditLekcija extends Component{
                 statuss: res.data.statuss,
                 isLoaded: true});
         })
-        .catch((error) =>
-        {
-            //TODO
-        })
+        .catch(error => console.log(error));
                 
     }
 
@@ -148,7 +145,7 @@ class EditLekcija extends Component{
                     <input className="datumsInput" name="datums" type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
                     <input className="laiksInput" name="laiks" type="time" value={this.state.laiks} onChange={evt => this.updateInput(evt)}></input>
                     
-                    <input className="apraksts" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
+                    <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
                     
                     <select className="selectBox" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
                         <option value="Notiek">Notiek</option>
