@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+
 import './EditAktualitateLayout.scss';
 
+// Komponente, kas atbildīga, par aktualitātes labojumiem.
 class EditAktualitate extends Component{
 
     constructor(props)
@@ -10,13 +12,13 @@ class EditAktualitate extends Component{
         super(props);
         this.state = 
         {
-            isLoaded: false,
             nosaukums: "",
             apraksts: "",
             autors: "",
+            errors: {},
+            isLoaded: false,
             submitPressed: false,
             deleted: false,
-            errors: {},
             isFormCorrect: true,
         }
         this.ParseInput = this.ParseInput.bind(this);
@@ -26,7 +28,8 @@ class EditAktualitate extends Component{
 
     componentDidMount()
     {
-        console.log(this.props.match.params.id);
+        // Sākumā tiek iegūti konkrētās aktualitātes jau esošie dati,
+        // kas tiks ievietoti laukos.
         this.getData();
     }
 
@@ -42,7 +45,6 @@ class EditAktualitate extends Component{
                 isLoaded: true});
         })
         .catch(error => console.log(error));
-                
     }
 
     updateInput(event)
@@ -52,13 +54,11 @@ class EditAktualitate extends Component{
 
         this.setState({
             [name]: event.target.value
-          });
+        });
     }
 
     ParseInput()
     {
-        // Pārbaude -> nevar būt mazāk par 5 simboliem un saturēt tikai no simboliem.
-
         const nosaukums = this.state.nosaukums;
         const apraksts = this.state.apraksts;
         const autors  = this.state.autors;
@@ -107,21 +107,17 @@ class EditAktualitate extends Component{
             isFormCorrect,
             errors
         })
-
-
-
-
     }
 
     DeletePost()
     {
-        console.log("this post has been deleted!");
+        // Lietotājs no "edit" skata var veikt arī elementa izdzēšanu.
         axios.delete('http://localhost:5000/api/aktualitates/' + this.props.match.params.id)
         .then(res =>
         {
             this.setState({deleted:true});
-        });
-
+        })
+        .catch(error => console.log(error));
     }
 
 
@@ -129,9 +125,7 @@ class EditAktualitate extends Component{
     {
         if(!this.state.isLoaded)
         {
-            return(
-                <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
-                )
+            return <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
         }
         else
         {
@@ -156,7 +150,6 @@ class EditAktualitate extends Component{
 
                         <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Labot!</button> 
                         <button className="buttonDzest" type="button" onClick={this.DeletePost}>Dzēst!</button> 
-
                     </div>)
             }
         }

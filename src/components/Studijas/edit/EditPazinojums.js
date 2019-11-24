@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+
 import './EditPazinojumsLayout.scss';
 import './../../utils/Design.scss';
 
@@ -12,12 +13,12 @@ class EditPazinojums extends Component{
 
         this.state=
         {
-            isLoaded: false,
             nosaukums: "",
             apraksts: "",
+            errors: {},
             deleted: false,
             isFormCorrect: true,
-            errors: {}
+            isLoaded: false,
         }
         this.ParseInput = this.ParseInput.bind(this);
         this.DeletePost = this.DeletePost.bind(this);
@@ -27,7 +28,6 @@ class EditPazinojums extends Component{
     {
         this.getData();
     }
-
     
     getData()
     {
@@ -42,7 +42,6 @@ class EditPazinojums extends Component{
             });
         })
         .catch(error => console.log(error));
-                
     }
 
     updateInput(event)
@@ -54,7 +53,6 @@ class EditPazinojums extends Component{
             [name]: event.target.value
           });
     }
-
 
     ParseInput()
     {
@@ -109,9 +107,7 @@ class EditPazinojums extends Component{
     {
         if(!this.state.isLoaded)
         {
-            return(
-                <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
-                )
+            return <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
         }
         else
         {
@@ -138,9 +134,7 @@ class EditPazinojums extends Component{
                 )
             }
         }
-
     }
 }
-
 
 export default EditPazinojums;

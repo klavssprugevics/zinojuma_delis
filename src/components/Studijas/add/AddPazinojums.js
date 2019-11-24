@@ -5,6 +5,7 @@ import axios from 'axios';
 import './AddPazinojumsLayout.scss';
 import './../../utils/Design.scss';
 
+// Komponente, kas atbildīga par paziņojumu pievienošanu datubāzei.
 class StudijasPievienotPazinojums extends Component{
 
     constructor()
@@ -14,18 +15,15 @@ class StudijasPievienotPazinojums extends Component{
         {            
             nosaukums: "",
             apraksts: "",
-            submitPressed: false,
             errors: {},
+            submitPressed: false,
             isFormCorrect: true,
         }
         this.ParseInput = this.ParseInput.bind(this);
-        
     }
-
 
     ParseInput()
     {
-
         const nosaukums = this.state.nosaukums;
         const apraksts = this.state.apraksts;
 
@@ -73,7 +71,6 @@ class StudijasPievienotPazinojums extends Component{
         this.setState({
             [name]: event.target.value
           });
-
     }
 
     render()
@@ -84,7 +81,6 @@ class StudijasPievienotPazinojums extends Component{
         }
         else
         {
-
         return(
             <div className ="pazinojumsForma">
                 <span className="virsraksts">Pievieno jaunu paziņojumu!</span>
@@ -100,10 +96,6 @@ class StudijasPievienotPazinojums extends Component{
             );              
         }
     }
-
-
-
-
 }
 
 export default StudijasPievienotPazinojums;

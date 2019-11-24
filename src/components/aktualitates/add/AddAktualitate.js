@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-// import './../AktualitatesPievienot.scss';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+
 import './AddAktualitateLayout.scss';
 
-
+// Komponente, kas atbildīga par aktualitātes pievienošanu datubāzei.
 class AddAktualitate extends Component{
 
     constructor()
@@ -15,8 +15,8 @@ class AddAktualitate extends Component{
             nosaukums: '',
             apraksts: '',
             autors: '',
-            submitPressed: false,
             errors: {},
+            submitPressed: false,
             isFormCorrect: true,
         }
         this.ParseInput = this.ParseInput.bind(this);
@@ -24,7 +24,6 @@ class AddAktualitate extends Component{
 
     ParseInput()
     {
-        
         const nosaukums = this.state.nosaukums;
         const apraksts = this.state.apraksts;
         const autors  = this.state.autors;
@@ -39,6 +38,8 @@ class AddAktualitate extends Component{
             "autors": autors
         };
 
+
+        // Pārbauda, vai lauki nav tukši.
         if(nosaukums === "")
         {
             isFormCorrect = false;
@@ -60,7 +61,7 @@ class AddAktualitate extends Component{
             errors["autors"] = "'Autors' nevar būt tukšs.";
         }
 
-
+        // Ja viss kārtībā, nosūtam post requestu.
         if(isFormCorrect)
         {
             axios.post("http://localhost:5000/api/aktualitates", data)
@@ -75,9 +76,6 @@ class AddAktualitate extends Component{
             isFormCorrect,
             errors
         })
-
-
-
     }
 
     updateInput(event)
@@ -87,8 +85,7 @@ class AddAktualitate extends Component{
 
         this.setState({
             [name]: event.target.value
-          });
-
+        });
     }
 
     render()
@@ -117,7 +114,6 @@ class AddAktualitate extends Component{
             );
         }
     }
-
-
 }
+
 export default AddAktualitate;

@@ -8,8 +8,7 @@ import AddAktualitate from '../aktualitates/add/AddAktualitate.js';
 import './../utils/Design.scss';
 import './AddInfoLayout.scss'
 
-
-
+// Komponente, kas strādā kā wrappers ap dažādajām add komponentēm.
 class AddInfo extends Component{
 
     constructor()
@@ -41,8 +40,7 @@ class AddInfo extends Component{
     {
         if(this.state.submitPressed)
         {
-            const choice = this.state.selectLabel;
-            switch(choice)
+            switch(this.state.selectLabel)
             {
                 case "pazinojums": return <Redirect to="/studijas"/>
                 case "lekcija": return <Redirect to="/studijas"/>
@@ -80,7 +78,6 @@ class AddInfo extends Component{
                 </div>
             );
         }
-
     }
 }
 
