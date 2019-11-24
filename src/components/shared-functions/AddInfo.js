@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
 
-import AddPazinojums from './../studijas/add/AddPazinojums.js';
-import AddLekcija from './../studijas/add/AddLekcija.js';
-import AddAktualitate from './../aktualitates/add/AddAktualitate.js';
+import AddPazinojums from '../studijas/add/AddPazinojums.js';
+import AddLekcija from '../studijas/add/AddLekcija.js';
+import AddAktualitate from '../aktualitates/add/AddAktualitate.js';
 
 import './../utils/Design.scss';
-import './TestAddLayout.scss'
+import './AddInfoLayout.scss'
 
 
 
-class TestAdd extends Component{
+class AddInfo extends Component{
 
     constructor()
     {
@@ -84,4 +84,4 @@ class TestAdd extends Component{
     }
 }
 
-export default TestAdd;
+export default AddInfo;

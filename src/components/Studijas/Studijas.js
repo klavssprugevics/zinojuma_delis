@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TestView from './../test/TestView.js';
+import ViewInfo from './../shared-functions/ViewInfo.js';
 import './Studijas.scss';
 
 class Studijas extends Component{
@@ -31,7 +31,7 @@ class Studijas extends Component{
                
                 <div>
                     {this.state.selectLabel === "pazinojums" &&
-                        <TestView
+                        <ViewInfo
                         customMessage="Jaunākie paziņojumi studijās!"
                         urlParams="pazinojumi"
                         fieldNames = {[
@@ -46,7 +46,7 @@ class Studijas extends Component{
                     
                     }
                     {this.state.selectLabel === "lekcija" &&
-                        <TestView
+                        <ViewInfo
                         customMessage="Lekciju izmaiņas"
                         urlParams="lekcijas"
                         fieldNames = {[

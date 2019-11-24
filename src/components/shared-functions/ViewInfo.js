@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-// import './TestView.scss';
 
-import './TestViewLayout.scss';
+import './ViewInfoLayout.scss';
 import './../utils/Design.scss';
 
 import axios from 'axios';
-import {timestampToDate} from '.././utils/DateFunctions.js';
+import {timestampToDate} from '../utils/DateFunctions.js';
 import {NavLink} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css'; 
 
 
-class TestView extends Component{
+class ViewInfo extends Component{
 
     constructor(props)
     {
@@ -71,7 +70,7 @@ class TestView extends Component{
             <div className="viewPage">
                 <div className="virsrakstsDiv">
                     <h1 className="virsraksts">{this.props.customMessage}</h1>
-                    <NavLink className="pievienotLink" to="/testadd">Pievienot info...</NavLink>
+                    <NavLink className="pievienotLink" to="/addinfo">Pievienot info...</NavLink>
                 </div>
                 <ul>
                     {this.state.response[this.props.urlParams].map(posts => 
@@ -96,4 +95,4 @@ class TestView extends Component{
     }
 }
 
-export default TestView;
+export default ViewInfo;

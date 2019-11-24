@@ -7,19 +7,11 @@ import {
 } from "react-router-dom";
 
 import Header from './components/utils/Header.js';
-
-
-import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
-
 import Studijas from './components/studijas/Studijas.js';
-
+import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
 import EditLekcija from './components/studijas/edit/EditLekcija.js';
-
-
-import TestView from './components/test/TestView.js';
-import TestAdd from './components/test/TestAdd.js';
-
-
+import ViewInfo from './components/shared-functions/ViewInfo.js';
+import AddInfo from './components/shared-functions/AddInfo.js';
 
 function App() {
   return (
@@ -28,80 +20,14 @@ function App() {
       <div className="App">
 
         <Switch>
-
-          {/* TEST ROUTE */}
-
-          <Route path="/test">
-            <TestView
-              customMessage="Jaunākais studentu dzīvē!"
-              urlParams="aktualitates"
-              fieldNames = {[
-                "nosaukums",
-                "apraksts",
-                "autors"
-              ]}
-              cssNames ={[
-                "nosaukums",
-                "apraksts",
-                "autors"
-              ]}
-            />
-          </Route>
-
-          {/* TEST ROUTE */}
-
-          <Route path="/test2">
-            <TestView
-              customMessage="Jaunākie paziņojumi studijās!"
-              urlParams="pazinojumi"
-              fieldNames = {[
-                "nosaukums",
-                "apraksts"
-              ]}
-              cssNames ={[
-                "nosaukums",
-                "apraksts",
-              ]}
-            />
-          </Route>
-
-          {/* TEST ROUTE */}
-
-          <Route path="/test3">
-            <TestView
-              customMessage="Lekciju izmaiņas"
-              urlParams="lekcijas"
-              fieldNames = {[
-                "kurss",
-                "datums",
-                "laiks",
-                "kabinets",
-                "statuss"
-              ]}
-              cssNames ={[
-                "nosaukums",
-                "datums",
-                "laiks",
-                "kabinets",
-                "statuss"
-              ]}
-            />
-          </Route>
-
-          {/* TEST ROUTE */}
-
-          <Route path="/testadd">
-              <TestAdd/>
+          <Route path="/addinfo">
+              <AddInfo/>
             </Route>
 
           <Route exact  path="/lekcijas/:id" render={(props) => 
           (
             <EditLekcija key={props.match.params.id} {...props} />
           )}/>
-
-          {/* <Route exact path="/studijas/pievienot" render={() =>
-            <StudijasPievienot/>}>
-          </Route> */}
 
           <Route path="/studijas">
             <Studijas/>
@@ -112,12 +38,8 @@ function App() {
             <EditAktualitate key={props.match.params.id} {...props} />
           )}/>
 
-          {/* <Route exact path="/aktualitates/pievienot" render={() =>
-             <AktualitatesPievienot/>}>
-          </Route> */}
-
           <Route path="/aktualitates">
-            <TestView
+            <ViewInfo
                 customMessage="Jaunākais studentu dzīvē!"
                 urlParams="aktualitates"
                 fieldNames = {[
