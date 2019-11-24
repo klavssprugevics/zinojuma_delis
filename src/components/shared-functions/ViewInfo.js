@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-import './ViewInfoLayout.scss';
-import './../utils/Design.scss';
-
 import axios from 'axios';
 import {timestampToDate} from '../utils/DateFunctions.js';
 import {NavLink} from "react-router-dom";
+
 import 'font-awesome/css/font-awesome.min.css'; 
+import './ViewInfoLayout.scss';
+import './../utils/Design.scss';
 
 
 class ViewInfo extends Component{
@@ -23,9 +23,8 @@ class ViewInfo extends Component{
             response: null,
             delete: false,
         }
-
+        
         this.DeletePost = this.DeletePost.bind(this);
-
     }
 
     componentDidMount()
@@ -41,7 +40,6 @@ class ViewInfo extends Component{
         {
             this.setState({response: res.data, isLoaded: true});
         });
-        
     }
 
 

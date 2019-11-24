@@ -8,6 +8,7 @@ import {
 
 import Header from './components/utils/Header.js';
 import Studijas from './components/studijas/Studijas.js';
+import Home from './components/sakums/Home.js';
 
 import EditAktualitate from './components/aktualitates/edit/EditAktualitate.js';
 import EditLekcija from './components/studijas/edit/EditLekcija.js';
@@ -64,7 +65,7 @@ function App() {
           </Route>
           
           <Route path="/">
-            <span>Ziņojumu dēlis!</span>
+            <Home/>
           </Route>
         </Switch>
       </div>
