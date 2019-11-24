@@ -9,21 +9,25 @@ import './ViewInfoLayout.scss';
 import './../utils/Design.scss';
 
 
+// Universāla komponente, kas spēj renderot jebkuru no datubāzes dokumentiem.
+/*
+    Props:
+    customMessage - string, virsraksta teksts
+    urlParams - string, subdirektorija api get requestam
+    fieldNames - array, visi fieldi, kurus gribam renderot no dokumenta
+    cssNames - attiecīgo fieldu css className (jābūt tādā pašā secībā)
+*/
 class ViewInfo extends Component{
 
     constructor(props)
     {
         super(props);
-        //isLoaded - flag, lai ielādētu lapu tikai tad, kad saņemti dati
-        //response - iegūtie dati
-        //delete - vai nospiesta delete poga
         this.state = 
         {
             isLoaded: false,
             response: null,
             delete: false,
         }
-        
         this.DeletePost = this.DeletePost.bind(this);
     }
 
@@ -34,14 +38,12 @@ class ViewInfo extends Component{
 
     getData()
     {
-        // Atgūstam datus no sava API
         axios.get("http://localhost:5000/api/" + this.props.urlParams)
         .then(res =>
         {
             this.setState({response: res.data, isLoaded: true});
         });
     }
-
 
     DeletePost(aktID)
     {
@@ -55,12 +57,9 @@ class ViewInfo extends Component{
 
     render()
     {
-        
         if(!this.state.isLoaded)
         {
-            return(
-            <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
-            )
+            return <h1 className="loading">Uzgaidi, kamēr atgūstam informāciju...</h1>
         }
         else
         {
@@ -71,13 +70,14 @@ class ViewInfo extends Component{
                     <NavLink className="pievienotLink" to="/addinfo">Pievienot info...</NavLink>
                 </div>
                 <ul>
+                    {/* Tiek iterēts cauri visiem iegūtajiem objektiem no response,
+                    un to attiecīgie lauki (no this.props.fieldNames) tiek renderēti. */}
                     {this.state.response[this.props.urlParams].map(posts => 
                     <div className="info" key={posts.id}>
                         {this.props.fieldNames.map((values, index) =>
                             <div key={values}>
                                 <span className={this.props.cssNames[index]}>{posts.datat[values]}</span><br/>
                             </div>
-
                         )}
                         <div className="footer">
                             <span className="timestamp">{timestampToDate(posts.datat.timestamp._seconds)}</span>

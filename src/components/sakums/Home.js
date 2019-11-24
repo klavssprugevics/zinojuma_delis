@@ -1,20 +1,11 @@
 import React, {Component} from 'react';
-
 import ViewInfoMini from '../shared-functions/ViewInfoMini.js';
 
 import './HomeLayout.scss'
 
+// Komponente, kas renderēs sākumlapu.
 class Home extends Component
 {
-    constructor()
-    {
-        super();
-        this.state =
-        {
-
-        }
-    }
-
     render()
     {
         return(

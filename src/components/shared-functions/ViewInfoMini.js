@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-
 import axios from 'axios';
-
 import {timestampToDate} from '../utils/DateFunctions.js';
+
 import './ViewInfoMiniLayout.scss';
 
+// Saīsināta ViewInfo komponente, bez liekām pogām -> priekš sākumlapas.
 class ViewInfoMini extends Component{
 
     constructor(props)
@@ -47,6 +47,7 @@ class ViewInfoMini extends Component{
             return(
             <div className="viewPageMini">
                 <ul>
+                    {/* Tāds pats princips kā ViewInfo komponentē, tikai ierobežo līdz 3 postiem */}
                     {this.state.response[this.props.urlParams].slice(0,3).map(posts => 
                     <div className="info" key={posts.id}>
                         <hr/>
@@ -62,7 +63,6 @@ class ViewInfoMini extends Component{
             );
         }
     }
-
 }
 
 export default ViewInfoMini;

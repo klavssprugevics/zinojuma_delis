@@ -140,7 +140,6 @@ class AddLekcija extends Component{
         );
         }
     }
-
 }
 
 export default AddLekcija;

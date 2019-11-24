@@ -1,17 +1,9 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
+
 import './Header.scss';
   
 class Header extends Component{
-
-    constructor()
-    {
-        super();
-        this.state = 
-        {
-
-        }
-    }
 
     render()
     {

@@ -5,6 +5,7 @@ import {Redirect} from 'react-router-dom';
 import './EditPazinojumsLayout.scss';
 import './../../utils/Design.scss';
 
+// Komponente, kas atbildīga par paziņojumu labošanu datubāzē.
 class EditPazinojums extends Component{
 
     constructor(props)

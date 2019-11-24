@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import ViewInfo from './../shared-functions/ViewInfo.js';
-import './Studijas.scss';
 
+import './Studijas.scss';
+import './../utils/Design.scss';
+
+// Komponente, kas strādās kā wrappers Lekciju izmaiņām un paziņojumiem.
 class Studijas extends Component{
 
     constructor()
@@ -43,7 +46,6 @@ class Studijas extends Component{
                         "apraksts",
                         ]}
                         />
-                    
                     }
                     {this.state.selectLabel === "lekcija" &&
                         <ViewInfo

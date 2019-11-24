@@ -3,58 +3,57 @@ $blue: #88BBD6;
 $gray: #CDCDCD;
 $light_gray : #E9E9E9;
 
+// Standarta css fails priekš elementu izskata.
+
 .virsraksts
 {
-font-style: italic;
-font-size: 50px;
-color: rgb(121, 114, 114);
-text-align: center;
+    font-style: italic;
+    font-size: 50px;
+    color: rgb(121, 114, 114);
+    text-align: center;
 }
-
 
 .nosaukums
 {
-font-style: bold;
-font-size: 40px;
-font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .apraksts
 {
-font-size: 25px;
-color: rgb(59, 54, 54);
+    font-size: 25px;
+    color: rgb(59, 54, 54);
 }
 
 .autors
 {
-font-size: 23px;
-font-style: italic;
-font-family: 'Times New Roman', Times, serif;
-
+    font-size: 23px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .datums
 {
-font-size: 35px;
+    font-size: 35px;
 }
 
 .laiks
 {
-font-size: 28px;
-font-style: italic;
+    font-size: 28px;
+    font-style: italic;
 }
 
 .kabinets
 {
-font-size: 25px;
+    font-size: 25px;
 }
 
 .statuss
 {
-
-font-size: 30px;
-font-weight: bold;
-font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
 }
            
 .timestamp
@@ -103,16 +102,12 @@ font-style: italic;
 
 .selectBox
 {
-    width: 40%;
-    margin-bottom: 50px;
-    padding: 5px;
-    height: 50px;
-
-    background: $gray;
-
+    appearance: none;
+    background: $gray url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat right;
+    background-origin: content-box;
+    
     font-size: 25px;
     border: none;
-
 }
 
 .datumsInput
@@ -150,7 +145,6 @@ font-style: italic;
     font-size: 20px;
     text-align: center;
     color: red;
-
 }
 
 .buttonDzest

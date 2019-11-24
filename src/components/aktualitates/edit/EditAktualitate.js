@@ -23,7 +23,6 @@ class EditAktualitate extends Component{
         }
         this.ParseInput = this.ParseInput.bind(this);
         this.DeletePost = this.DeletePost.bind(this);
-
     }
 
     componentDidMount()
@@ -119,7 +118,6 @@ class EditAktualitate extends Component{
         })
         .catch(error => console.log(error));
     }
-
 
     render()
     {

@@ -18,7 +18,6 @@ export const timestampToDate = (seconds) =>
     const datums = diena + "." + menesis + "." + gads;
     const laiks = stundas + ":" + minutes;
 
-
     // Lai būtu pirmais vārds boldā
     var divStyle =
     {

@@ -28,14 +28,14 @@ function App() {
         <Switch>
           <Route path="/addinfo">
               <AddInfo/>
-            </Route>
+          </Route>
 
-          <Route exact  path="/lekcijas/:id" render={(props) => 
+          <Route exact path="/lekcijas/:id" render={(props) => 
           (
             <EditLekcija key={props.match.params.id} {...props} />
           )}/>
 
-          <Route exact  path="/pazinojumi/:id" render={(props) => 
+          <Route exact path="/pazinojumi/:id" render={(props) => 
           (
             <EditPazinojums key={props.match.params.id} {...props} />
           )}/>
@@ -44,7 +44,7 @@ function App() {
             <Studijas/>
           </Route>
           
-          <Route exact  path="/aktualitates/:id" render={(props) =>
+          <Route exact path="/aktualitates/:id" render={(props) =>
           (
             <EditAktualitate key={props.match.params.id} {...props} />
           )}/>

@@ -1,9 +1,3 @@
-$light_blue: #99D3DF;
-$blue: #88BBD6;
-$gray: #CDCDCD;
-$light_gray : #E9E9E9; 
-
-
 .pageStuff
 {
     display:flex;
@@ -20,12 +14,8 @@ $light_gray : #E9E9E9;
         padding: 5px;
         height: 50px;
 
-        background: $gray;
-
         font-size: 30px;
         border: none;
         text-align: center;
-
     }
-
 }
