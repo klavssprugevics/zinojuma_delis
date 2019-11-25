@@ -44,6 +44,10 @@ class AddLekcija extends Component{
             kurss = "Tīmekļa tehnoloģijas 2019";
         else if(this.state.selectLabel === "dbteh")
             kurss = "Datu bāzu tehnoloģijas 2019";
+        else if(this.state.selectLabel === "sm")
+            kurss = "Skaitliskās metodes";
+        else if(this.state.selectLabel === "vpl")
+            kurss = "Vizuālās programmēšans valodas"; 
 
         const data = {
             "kurss": kurss,
@@ -121,6 +125,8 @@ class AddLekcija extends Component{
                 <select className="selectBox2" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                     <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>
                     <option value="dbteh">Datu bāzu tehnoloģijas 2019</option>
+                    <option value="sm">Skaitliskās metodes</option>
+                    <option value="vpl">Vizuālās programmēšans valodas</option>
                 </select>
 
                 <input className="datumsInput" name="datums" type="date" value={this.state.datums} onChange={evt => this.updateInput(evt)}></input>
