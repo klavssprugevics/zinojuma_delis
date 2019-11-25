@@ -13,3 +13,11 @@ Sākumlapā tiek izveidoti 2 saraksti, kas atspoguļo jaunākos paziņojumus un 
 
 ## Lietošana
 Mājaslapa lietojama kopā ar izveidoto api un firebase datubāzi, kas pieejama šeit: [API](  https://gitlab.venta.lv/s7_spruge_k/tt2019_kursadarbs_zinojuma_delis_api)
+
+Main direktorijā:
+
+`npm init`
+
+`npm install`
+
+`npm start`
