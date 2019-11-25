@@ -164,7 +164,7 @@ class EditLekcija extends Component{
             {
                 return(
                     <div className="lekcijaForma"> 
-                    <span className="virsraksts">Pievienot lekciju izmaiņas!</span>
+                    <span className="virsraksts">Labot lekciju...</span>
                     
                     <select className="selectBox" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                         <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>

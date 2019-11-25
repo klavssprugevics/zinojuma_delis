@@ -1,54 +1,119 @@
-.editFields
+@media screen and (min-width: 320px) and (max-width: 768px) 
 {
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content:center;
-    align-items: center;
+    .editFields
+    {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        text-align: center;
 
-    .virsraksts
-    {
-        margin-bottom: 40px;
-    }
+        .virsraksts
+        {
+            margin-bottom: 40px;
+        }
 
-    .textInput
-    {
-        border: none;
-        width: 40%;
-        height: 40px;
-        font-size: 30px;
-        margin: 10px;
-        font-family: inherit;
-    }
+        .textInput
+        {
+            border: none;
+            width: 80%;
+            height: 40px;
+            margin: auto;
 
-    .textareaInput
-    {
-        width: 40%;
-        height: 400px;
-        margin: 10px;
-    }
+            font-size: 30px;
+            font-family: inherit;
+        }
 
-    .buttonLabot
-    {
-        padding: 16px 32px;
-        margin-bottom: 10px;
-        width: 40%;
-    }
+        .textareaInput
+        {
+            width: 80%;
+            height: 400px;
+            margin: auto;
+        }
 
-    .buttonPievienot
-    {
-        padding: 16px 32px;
-        width: 40%;
-        margin-bottom: 20px;
-    }
+        .buttonLabot
+        {
+            padding: 16px 32px;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 80%;
+        }
 
-    .buttonDzest
-    {
-        padding: 16px 32px;
-        width: 40%;
+        .buttonPievienot
+        {
+            padding: 16px 32px;
+            margin: auto;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .buttonDzest
+        {
+            padding: 16px 32px;
+            width: 80%;
+            margin: auto;
+        }
+        .errorMsg
+        {
+            margin: 5px;
+        }
     }
-    .errorMsg
+}
+
+@media screen and (min-width: 768px) 
+{
+    .editFields
     {
-        margin: 5px;
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        align-items: center;
+
+        .virsraksts
+        {
+            margin-bottom: 40px;
+        }
+
+        .textInput
+        {
+            border: none;
+            width: 40%;
+            height: 40px;
+            font-size: 30px;
+            margin: 10px;
+            font-family: inherit;
+        }
+
+        .textareaInput
+        {
+            width: 40%;
+            height: 400px;
+            margin: 10px;
+        }
+
+        .buttonLabot
+        {
+            padding: 16px 32px;
+            margin-bottom: 10px;
+            width: 40%;
+        }
+
+        .buttonPievienot
+        {
+            padding: 16px 32px;
+            width: 40%;
+            margin-bottom: 20px;
+        }
+
+        .buttonDzest
+        {
+            padding: 16px 32px;
+            width: 40%;
+        }
+        .errorMsg
+        {
+            margin: 5px;
+        }
     }
 }

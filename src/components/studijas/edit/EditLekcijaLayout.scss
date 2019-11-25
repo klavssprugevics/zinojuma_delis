@@ -1,45 +1,123 @@
-.lekcijaForma
+@media screen and (min-width: 768px)
 {
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-
-    .virsraksts
+    .lekcijaForma
     {
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
 
-        margin-bottom: 40px;
+        .virsraksts
+        {
+
+            margin-bottom: 40px;
+        }
+
+        .selectBox
+        {
+            width: 40%;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .textInput
+        {
+            width: 40%;
+            height: 40px;
+            margin-bottom: 30px;
+        }
+
+        .textareaInput
+        {
+            width: 40%;
+            height: 400px;
+            margin: 10px;
+        }
+
+        .buttonLabot
+        {
+            padding: 16px 32px;
+            width: 40%;
+        }
+
+        .buttonDzest
+        {
+            padding: 16px 32px;
+            width: 40%;
+            margin-top: 20px;
+        }
+
+        .errorMsg
+        {
+            margin: 5px;
+        }
     }
+}
 
-    .textInput
+@media screen and (min-width: 320px) and (max-width: 768px) 
+{
+    .lekcijaForma
     {
-        width: 40%;
-        height: 40px;
-        margin-bottom: 30px;
-    }
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
 
-    .textareaInput
-    {
-        width: 40%;
-        height: 400px;
-        margin: 10px;
-    }
+        .virsraksts
+        {
+            margin: auto;
+            text-align: center;
+        }
 
-    .buttonLabot
-    {
-        padding: 16px 32px;
-        width: 40%;
-    }
+        .selectBox
+        {
+            width: 80%;
+            margin: auto;
+            padding: 15px;
+        }
 
-    .buttonDzest
-    {
-        padding: 16px 32px;
-        width: 40%;
-        margin-top: 20px;
-    }
+        .laiksInput
+        {
+            width: 60%;
+            height: 40px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
 
-    .errorMsg
-    {
-        margin: 5px;
+        .datumsInput
+        {
+            width: 60%;
+            height: 40px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .textInput
+        {
+            width: 60%;
+            height: 40px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .buttonPievienot
+        {
+            padding: 16px 32px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .buttonDzest
+        {
+            padding: 16px 32px;
+            width: 80%;
+            margin:auto;
+            margin-top: 20px;
+        }
+
+        .errorMsg
+        {
+            margin: 5px;
+        }
     }
 }

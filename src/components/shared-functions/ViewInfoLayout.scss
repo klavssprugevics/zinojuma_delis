@@ -144,31 +144,43 @@
     {
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin: 10px;
         width: 100%;
 
         .virsrakstsDiv
         {
             display: flex;
             flex-direction:column;
-            justify-content: center;
+            text-align:center;
 
             .virsraksts
             {
+                margin: auto;
                 margin-top: 30px;
-                margin-right: 50px;
+                margin-bottom: 30px;
             }
-            
-            
+
+            .pievienotLink
+            {
+                justify-content: center;
+                margin:auto;
+                margin-bottom: 30px;
+
+                
+                height: 40px;
+                width: 80%;
+            }
         }
 
         .navRez
         {
-            margin-top: 50px;
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
 
-            font-size: 50px;
-            font-style: italic;
             text-align: center;
+            font-size: 30px;
+            font-style: italic;
         }
 
         .searchSection
@@ -176,10 +188,13 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            text-align: center;
 
             .textInput
             {
                 width: 80%;
+                padding: 10px;
+                margin: auto;
                 height: 50px;
             }
 
@@ -190,11 +205,16 @@
                 padding-left: 30px;
                 padding-right: 30px;
                 
+                margin: auto;
                 margin-top: 10px;
             }
 
             .cancelSearch
             {
+                width: 80%;
+                margin:auto;
+                margin-top: 10px;
+
                 border: none;
                 background-color: #E9E9E9;
             }
@@ -206,6 +226,7 @@
             flex-direction: column;
             margin-bottom: 30px;
             width: 80%;
+            text-align: center;
 
             .nosaukums
             {
@@ -221,47 +242,46 @@
 
             .autors
             {
-                display: flex;
                 margin-bottom: 20px;
-                margin-left: 15px;
             }
 
             .datums
             {
                 display: flex;
-                margin-left: 10px;
             }
 
             .laiks
             {
                 display: flex;
-                margin-left: 10px;
             }
 
             .kabinets
             {
                 display: flex;
-                margin-left: 10px;
             }
 
             .footer
             {
                 display: flex;
                 flex-direction: column;
+                text-align: center;
                 
                 .footerPoga
                 {
-                    margin-left: 40px;
-                    margin-right: 40px;
+                    margin: auto;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+
                 }
 
                 .editLink
                 {
                     padding: 10px;
-                    padding-left: 15px;
-                    padding-right: 18px;
+                    padding-left: 40px;
+                    padding-right: 40px;
 
-                    margin-right: 40px;
+                    margin: auto;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -271,12 +291,6 @@
             display: flex;
             justify-content: center;
             margin: auto;
-        }
-
-        .pievienotLink
-        {
-            margin-bottom: 30px;
-            width: 68%;
         }
     }
 

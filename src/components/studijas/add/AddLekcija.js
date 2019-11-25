@@ -137,7 +137,7 @@ class AddLekcija extends Component{
 
                 <button className="buttonPievienot" type="button" onClick={this.ParseInput}>Publicēt!</button> 
             </div>
-        );
+            );
         }
     }
 }

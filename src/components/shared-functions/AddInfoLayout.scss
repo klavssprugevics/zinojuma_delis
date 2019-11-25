@@ -31,12 +31,14 @@
         width: 100%;
         display:flex;
         justify-content:center;
-        align-items: center;
         flex-direction: column;
+        text-align: center;
 
         .selectBox
         {
-            width: 40%;
+            width: 80%;
+            margin: auto;
+            margin-top: 0px;
             margin-bottom: 40px;
             padding: 5px;
             height: 50px;

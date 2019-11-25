@@ -1,36 +1,81 @@
-.viewPageMini
+@media screen and (min-width: 320px) and (max-width: 768px)
 {
-    .nosaukums
+    .viewPageMini
     {
-        font-size: 30px;
-        font-weight: bold;
-    }
+        display:flex;
+        text-align: center;
+        .nosaukums
+        {
+            font-size: 30px;
+            font-weight: bold;
+        }
 
-    .apraksts
-    {
-        font-size: 20px;
-    }
-    .timestamp
-    {
-        font-size: 20px;
-    }
+        .apraksts
+        {
+            font-size: 20px;
+        }
+        .timestamp
+        {
+            font-size: 20px;
+        }
 
-    .datums
-    {
-        font-size: 20px;
-    }
+        .datums
+        {
+            font-size: 20px;
+        }
 
-    .laiks
-    {
-        font-size: 20px;
-    }
+        .laiks
+        {
+            font-size: 20px;
+        }
 
-    .kabinets
-    {
-        font-size: 20px;
-    }
+        .kabinets
+        {
+            font-size: 20px;
+        }
 
-    .statuss{
-        font-size: 20px;
+        .statuss{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .viewPageMini
+    {
+        .nosaukums
+        {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .apraksts
+        {
+            font-size: 20px;
+        }
+        .timestamp
+        {
+            font-size: 20px;
+        }
+
+        .datums
+        {
+            font-size: 20px;
+        }
+
+        .laiks
+        {
+            font-size: 20px;
+        }
+
+        .kabinets
+        {
+            font-size: 20px;
+        }
+
+        .statuss{
+            font-size: 20px;
+        }
     }
 }
