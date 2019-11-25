@@ -118,7 +118,7 @@ class AddLekcija extends Component{
             <div className="lekcijaForma"> 
                 <span className="virsraksts">Pievienot lekciju izmaiņas!</span>
                 
-                <select className="selectBox" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
+                <select className="selectBox2" name="selectLabel" value={this.state.selectLabel} onChange={evt => this.updateInput(evt)}>
                     <option value="TimeklaTehn">Tīmekļa tehnoloģijas 2019</option>
                     <option value="dbteh">Datu bāzu tehnoloģijas 2019</option>
                 </select>
@@ -130,7 +130,7 @@ class AddLekcija extends Component{
                 <input className="textInput" name="kabinets" type="text" placeholder="Kabinets" value={this.state.kabinets} onChange={evt => this.updateInput(evt)} /><br/>
                 <div className="errorMsg">{this.state.errors.kabinets}</div>
              
-                <select className="selectBox" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
+                <select className="selectBox2" name="statuss" value={this.state.statuss} onChange={evt => this.updateInput(evt)}>
                     <option value="Notiek">Notiek</option>
                     <option value="Atcelts">Atcelts</option>
                 </select>

@@ -1,22 +1,51 @@
-.addPage
+@media screen and (min-width: 768px)
 {
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-
-    .selectBox
-    {
-        width: 40%;
-        margin-bottom: 40px;
-        padding: 5px;
-        height: 50px;
-
-    }
-
-    .ievade
+    .addPage
     {
         width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+
+        .selectBox
+        {
+            width: 40%;
+            margin-bottom: 40px;
+            padding: 5px;
+            height: 50px;
+
+        }
+
+        .ievade
+        {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) 
+{
+    .addPage
+    {
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+
+        .selectBox
+        {
+            width: 40%;
+            margin-bottom: 40px;
+            padding: 5px;
+            height: 50px;
+
+        }
+
+        .ievade
+        {
+            width: 100%;
+        }
     }
 }

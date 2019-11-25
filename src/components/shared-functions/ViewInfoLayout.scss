@@ -1,136 +1,288 @@
-.viewPage
+@media screen and (min-width: 768px)
 {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    width: 100%;
-
-    .virsrakstsDiv
-    {
-        display: flex;
-        justify-content: center;
-
-        .virsraksts
-        {
-            margin-top: 30px;
-            margin-right: 200px;
-        }
-    }
-
-    .navRez
-    {
-        margin-top: 50px;
-
-        font-size: 50px;
-        font-style: italic;
-        text-align: center;
-    }
-
-    .searchSection
-    {
-        display: flex;
-        justify-content: space-around;
-
-        .textInput
-        {
-            width: 100%;
-            height: 50px;
-        }
-
-        .buttonPievienot
-        {
-            margin-left: 30px;
-            padding: 10px;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
-        .cancelSearch
-        {
-            border: none;
-            background-color: #E9E9E9;
-        }
-    }
-
-    .info
+    .viewPage
     {
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
-        
-        .nosaukums
-        {
-            display: flex;
-            margin-bottom: 30px;
-        }
-        
-        .apraksts
-        {
-            display: flex;
-            margin-bottom: 30px;
-        }
+        margin: 20px;
+        width: 100%;
 
-        .autors
+        .virsrakstsDiv
         {
             display: flex;
-            margin-bottom: 20px;
-            margin-left: 15px;
-        }
+            justify-content: center;
 
-        .datums
-        {
-            display: flex;
-            margin-left: 10px;
-        }
-
-        .laiks
-        {
-            display: flex;
-            margin-left: 10px;
-        }
-
-        .kabinets
-        {
-            display: flex;
-            margin-left: 10px;
-        }
-
-        .footer
-        {
-            display: flex;
-            
-            .footerPoga
+            .virsraksts
             {
+                margin-top: 30px;
+                margin-right: 200px;
+            }
+        }
+
+        .navRez
+        {
+            margin-top: 50px;
+
+            font-size: 50px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .searchSection
+        {
+            display: flex;
+            justify-content: space-around;
+
+            .textInput
+            {
+                width: 100%;
+                height: 50px;
+            }
+
+            .buttonPievienot
+            {
+                margin-left: 30px;
+                padding: 10px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .cancelSearch
+            {
+                border: none;
+                background-color: #E9E9E9;
+            }
+        }
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            
+            .nosaukums
+            {
+                display: flex;
+                margin-bottom: 30px;
+            }
+            
+            .apraksts
+            {
+                display: flex;
+                margin-bottom: 30px;
+            }
+
+            .autors
+            {
+                display: flex;
+                margin-bottom: 20px;
+                margin-left: 15px;
+            }
+
+            .datums
+            {
+                display: flex;
                 margin-left: 10px;
             }
 
-            .editLink
+            .laiks
             {
-                padding: 10px;
-                padding-left: 15px;
-                padding-right: 18px;
-
-                margin-left: 15px;
-                margin-right: 15px;
+                display: flex;
+                margin-left: 10px;
             }
+
+            .kabinets
+            {
+                display: flex;
+                margin-left: 10px;
+            }
+
+            .footer
+            {
+                display: flex;
+                
+                .footerPoga
+                {
+                    margin-left: 10px;
+                }
+
+                .editLink
+                {
+                    padding: 10px;
+                    padding-left: 15px;
+                    padding-right: 18px;
+
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .loading
+        {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .pievienotLink
+        {
+            margin: 30px;
         }
     }
 
-    .loading
+    hr
     {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-
-    .pievienotLink
-    {
-        margin: 30px;
+        width: 100%;
+        height: 1px; 
     }
 }
 
-hr
+@media screen and (min-width: 320px) and (max-width: 768px) 
 {
-    width: 100%;
-    height: 1px; 
+    .viewPage
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        width: 100%;
+
+        .virsrakstsDiv
+        {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+
+            .virsraksts
+            {
+                margin-top: 30px;
+                margin-right: 50px;
+            }
+            
+            
+        }
+
+        .navRez
+        {
+            margin-top: 50px;
+
+            font-size: 50px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .searchSection
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .textInput
+            {
+                width: 80%;
+                height: 50px;
+            }
+
+            .buttonPievienot
+            {
+                width: 80%;
+                padding: 10px;
+                padding-left: 30px;
+                padding-right: 30px;
+                
+                margin-top: 10px;
+            }
+
+            .cancelSearch
+            {
+                border: none;
+                background-color: #E9E9E9;
+            }
+        }
+
+        .info
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            width: 80%;
+
+            .nosaukums
+            {
+                display: flex;
+                margin-bottom: 30px;
+            }
+            
+            .apraksts
+            {
+                display: flex;
+                margin-bottom: 30px;
+            }
+
+            .autors
+            {
+                display: flex;
+                margin-bottom: 20px;
+                margin-left: 15px;
+            }
+
+            .datums
+            {
+                display: flex;
+                margin-left: 10px;
+            }
+
+            .laiks
+            {
+                display: flex;
+                margin-left: 10px;
+            }
+
+            .kabinets
+            {
+                display: flex;
+                margin-left: 10px;
+            }
+
+            .footer
+            {
+                display: flex;
+                flex-direction: column;
+                
+                .footerPoga
+                {
+                    margin-left: 40px;
+                    margin-right: 40px;
+                }
+
+                .editLink
+                {
+                    padding: 10px;
+                    padding-left: 15px;
+                    padding-right: 18px;
+
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .loading
+        {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .pievienotLink
+        {
+            margin-bottom: 30px;
+            width: 68%;
+        }
+    }
+
+    hr
+    {
+        width: 100%;
+        height: 1px; 
+    }
 }

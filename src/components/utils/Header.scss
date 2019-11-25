@@ -1,32 +1,67 @@
 $light_blue: #99D3DF;
 $blue: #88BBD6;
 $gray: #CDCDCD;
-$light_gray : #E9E9E9; 
+$light_gray : #E9E9E9;
 
-.NavBar
+@media screen and (min-width: 320px) and (max-width: 768px) 
 {
-  display: flex;
-  justify-content: space-between;
-
-  background-color: $blue;
-
-  .NavLink
+  .NavBar
   {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-  
-    border-style: solid;
-    border-width: thin;
+    background-color: $blue;
+
+    .NavLink
+    {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      flex-basis: 50%;
+
+      text-decoration: none;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+    
+      border-style: solid;
+      border-width: thin;
+    }
+
+    .NavLink:hover
+    {
+      background-color: $light_blue;
+    }
   }
+}
 
-  .NavLink:hover
+@media screen and (min-width: 768px)
+{
+  .NavBar
   {
-    background-color: $light_blue;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $blue;
+
+    .NavLink
+    {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      flex-basis: 50%;
+
+      text-decoration: none;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+    
+      border-style: solid;
+      border-width: thin;
+    }
+
+    .NavLink:hover
+    {
+      background-color: $light_blue;
+    }
   }
 }

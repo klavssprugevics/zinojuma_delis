@@ -1,43 +1,120 @@
-.lekcijaForma
+$gray: #CDCDCD;
+
+@media screen and (min-width: 768px)
 {
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-
-
-    .virsraksts
+    .lekcijaForma
     {
-        margin-bottom: 100px;
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+
+
+        .virsraksts
+        {
+            margin-bottom: 100px;
+        }
+
+        .selectBox2
+        {
+            width: 40%;
+            margin-bottom: 30px;
+            height: 50px;
+
+            appearance: none;
+            background: $gray url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat right;
+            background-origin: content-box;
+            font-size: 25px;
+            border: none;
+        }
+
+        .datumsInput
+        {
+            width: 40%;
+            margin-bottom: 30px;
+            padding: 5px;
+            height: 50px;
+        }
+
+        .laiksInput
+        {
+            width: 40%;
+            margin-bottom: 30px;
+            padding: 5px;
+            height: 50px;
+        }
+
+        .textInput
+        {
+            width: 40%;
+            margin-bottom: 10px;
+            font-family: inherit;
+        }
+
+        .buttonPievienot
+        {
+            padding: 16px 32px;
+            width: 40%;
+        }
     }
-    
-    .datumsInput
-    {
-        width: 40%;
-        margin-bottom: 30px;
-        padding: 5px;
-        height: 50px;
-    }
+}
 
-    .laiksInput
+@media screen and (min-width: 320px) and (max-width: 768px)
+{
+    .lekcijaForma
     {
-        width: 40%;
-        margin-bottom: 30px;
-        padding: 5px;
-        height: 50px;
-    }
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
 
-    .textInput
-    {
-        width: 40%;
-        margin-bottom: 10px;
-        font-family: inherit;
-    }
 
-    .buttonPievienot
-    {
-        padding: 16px 32px;
-        width: 40%;
+        .selectBox2
+        {
+            width: 80%;
+            margin-bottom: 30px;
+            height: 50px;
+
+            background: $gray;
+            font-size: 25px;
+            border: none;
+        }
+
+        .virsraksts
+        {
+            margin-bottom: 100px;
+            width: 80%;
+        }
+        
+        .datumsInput
+        {
+            width: 80%;
+            margin-bottom: 30px;
+            padding: 5px;
+            height: 50px;
+        }
+
+        .laiksInput
+        {
+            width: 80%;
+            margin-bottom: 30px;
+            padding: 5px;
+            height: 50px;
+        }
+
+        .textInput
+        {
+            width: 80%;
+            margin-bottom: 10px;
+            font-family: inherit;
+        }
+
+        .buttonPievienot
+        {
+            padding: 16px 32px;
+            width: 80%;
+        }
     }
 }

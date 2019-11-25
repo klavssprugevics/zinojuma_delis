@@ -1,27 +1,62 @@
-.miniDisplay
+@media screen and (min-width: 320px) and (max-width: 768px) 
 {
-    display: flex;
-    flex-direction: row;
-
-    .virsraksts {
-        margin-top: 10px;
-        font-size: 40px;
-    }
-
-    .miniPazinojumi
+    .miniDisplay
     {
         display: flex;
         flex-direction: column;
-        float: left;
-        width: 50%;
-    }
+        justify-content: center;
 
-    .miniLekcijas
+        .virsraksts {
+            display: flex;
+            margin-top: 10px;
+            font-size: 40px;
+        }
+
+        .miniPazinojumi
+        {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            width: 50%;
+        }
+
+        .miniLekcijas
+        {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .miniDisplay
     {
         display: flex;
-        flex-direction: column;
-        float: left;
-        width: 50%;
+        flex-direction: row;
+
+        .virsraksts {
+            margin-top: 10px;
+            font-size: 40px;
+        }
+
+        .miniPazinojumi
+        {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            width: 50%;
+        }
+
+        .miniLekcijas
+        {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            width: 50%;
+        }
     }
 }
 
